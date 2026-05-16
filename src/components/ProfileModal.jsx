@@ -47,7 +47,7 @@ export default function ProfileModal({ profile, onClose }) {
 
   return (
     <div
-      style={{ position: "fixed", inset: 0, zIndex: 50, overflowY: "auto", padding: "24px 16px" }}
+      style={{ position: "fixed", inset: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "center", padding: "20px 16px" }}
       onClick={onClose}
     >
       {/* Backdrop */}
@@ -60,20 +60,20 @@ export default function ProfileModal({ profile, onClose }) {
 
       {/* Sheet */}
       <div
-        className="modal-sheet"
         style={{
           position: "relative", background: "#fff",
           borderRadius: 20, maxWidth: 560, width: "100%",
-          margin: "0 auto",
           border: "1px solid rgba(0,0,0,0.06)",
           boxShadow: "0 32px 80px rgba(0,0,0,0.2)",
           overflow: "hidden",
+          display: "flex", flexDirection: "column",
+          maxHeight: "calc(100dvh - 40px)",
         }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Banner */}
         <div style={{
-          height: 100,
+          height: 100, flexShrink: 0,
           background: "linear-gradient(135deg, #0d0d12 0%, #002147 60%, #003d7a 100%)",
           position: "relative", overflow: "hidden",
         }}>
@@ -107,7 +107,7 @@ export default function ProfileModal({ profile, onClose }) {
           </div>
         </div>
 
-        <div style={{ padding: "52px 24px 28px" }}>
+        <div style={{ padding: "52px 24px 28px", overflowY: "auto", flex: 1 }}>
           {/* Identity */}
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 18, flexWrap: "wrap" }}>
             <div>
