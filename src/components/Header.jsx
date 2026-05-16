@@ -1,24 +1,36 @@
 export default function Header() {
   return (
-    <header className="glass sticky top-0 z-30 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-4">
-            <div className="flex flex-col leading-tight">
-              <span className="text-[10px] font-bold tracking-[0.35em] text-[#F4A024] uppercase">Programa</span>
-              <span className="text-2xl font-black tracking-tight text-[#002147]">Exponencial</span>
+    <header className="nav-glass sticky top-0 z-30">
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 52 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <div style={{ lineHeight: 1.1 }}>
+              <div style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.14em", color: "var(--andi-gold)", textTransform: "uppercase", marginBottom: 1 }}>
+                Programa
+              </div>
+              <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: "-0.04em", color: "var(--andi-navy)" }}>
+                Exponencial
+              </div>
             </div>
-            <div className="h-7 w-px bg-[#002147]/10 hidden sm:block" />
-            <span className="text-sm text-[#002147]/40 hidden sm:block font-medium tracking-wide">
+            <div style={{ width: 1, height: 24, background: "rgba(0,0,0,0.1)" }} className="hidden sm:block" />
+            <span style={{ fontSize: 13, color: "var(--apple-mid)", fontWeight: 400 }} className="hidden sm:block">
               Directorio de Talento ANDI
             </span>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="text-right hidden md:block">
-              <p className="text-[9px] text-[#002147]/30 uppercase tracking-widest">Impulsado por</p>
-              <p className="text-sm font-bold text-[#002147]/80">ANDI Antioquia</p>
+
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <div style={{ textAlign: "right" }} className="hidden md:block">
+              <div style={{ fontSize: 9, color: "var(--apple-light)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Impulsado por</div>
+              <div style={{ fontSize: 13, fontWeight: 600, color: "var(--andi-navy)" }}>ANDI Antioquia</div>
             </div>
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#F4A024] to-[#e8880a] flex items-center justify-center font-black text-white text-[10px] shadow-md">
+            <div style={{
+              width: 34, height: 34, borderRadius: 10,
+              background: "linear-gradient(135deg, #F4A024, #e8880a)",
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: 9, fontWeight: 900, color: "#fff",
+              letterSpacing: "0.05em",
+              boxShadow: "0 2px 8px rgba(244,160,36,0.35)",
+            }}>
               ANDI
             </div>
           </div>

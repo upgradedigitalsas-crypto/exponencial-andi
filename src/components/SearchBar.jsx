@@ -1,34 +1,36 @@
 export default function SearchBar({ value, onChange, total, filtered }) {
   return (
-    <div className="glass sticky top-16 z-20 shadow-sm border-b border-[#002147]/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
-          <div className="relative flex-1 max-w-2xl w-full">
-            <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-              <svg className="w-4 h-4 text-[#002147]/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
+    <div className="nav-glass sticky top-[52px] z-20">
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "10px 24px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <div style={{ position: "relative", flex: 1, maxWidth: 560 }}>
+            <svg style={{ position: "absolute", left: 13, top: "50%", transform: "translateY(-50%)", width: 16, height: 16, color: "var(--apple-light)", pointerEvents: "none" }}
+              fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
             <input
               type="text"
               value={value}
               onChange={(e) => onChange(e.target.value)}
               placeholder="Buscar por nombre, empresa, rol o habilidad..."
-              className="glass-input w-full pl-11 pr-10 py-2.5 rounded-xl text-sm transition-all"
+              className="apple-input"
+              style={{ width: "100%", padding: "9px 36px 9px 38px", fontSize: 14 }}
             />
             {value && (
-              <button
-                onClick={() => onChange("")}
-                className="absolute inset-y-0 right-3 flex items-center text-[#002147]/30 hover:text-[#002147]/70 transition-colors"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <button onClick={() => onChange("")} style={{
+                position: "absolute", right: 10, top: "50%", transform: "translateY(-50%)",
+                background: "rgba(0,0,0,0.15)", border: "none", borderRadius: "50%",
+                width: 18, height: 18, display: "flex", alignItems: "center", justifyContent: "center",
+                cursor: "pointer", color: "#fff", padding: 0,
+              }}>
+                <svg style={{ width: 10, height: 10 }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             )}
           </div>
-          <div className="text-sm text-[#002147]/40 whitespace-nowrap">
-            <span className="font-bold text-[#002147]/80">{filtered}</span> de {total} perfiles
+          <div style={{ fontSize: 13, color: "var(--apple-light)", whiteSpace: "nowrap", marginLeft: "auto" }}>
+            <span style={{ fontWeight: 600, color: "var(--apple-dark)" }}>{filtered}</span> de {total} perfiles
           </div>
         </div>
       </div>

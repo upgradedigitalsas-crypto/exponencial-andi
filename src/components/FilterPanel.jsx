@@ -2,24 +2,20 @@ import { CERTIFICATIONS, SECTORS, ROLES } from "../data/profiles";
 
 function FilterGroup({ title, options, selected, onToggle }) {
   return (
-    <div className="mb-5">
-      <h3 className="text-[10px] font-bold text-[#002147]/35 uppercase tracking-[0.2em] mb-2.5">{title}</h3>
-      <div className="space-y-1">
+    <div style={{ marginBottom: 24 }}>
+      <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--apple-light)", marginBottom: 8, paddingLeft: 12 }}>
+        {title}
+      </div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
         {options.map((opt) => {
           const active = selected.includes(opt);
           return (
-            <button
-              key={opt}
-              onClick={() => onToggle(opt)}
-              className={`w-full text-left px-3 py-1.5 rounded-lg text-xs transition-all flex items-center justify-between gap-2 border ${
-                active
-                  ? "bg-[#002147]/8 text-[#002147] border-[#002147]/20 font-semibold"
-                  : "text-[#002147]/50 hover:text-[#002147]/80 hover:bg-[#002147]/4 border-transparent"
-              }`}
-            >
-              <span className="leading-tight">{opt}</span>
+            <button key={opt} onClick={() => onToggle(opt)}
+              className={`filter-btn ${active ? "active" : ""}`}
+              style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+              <span style={{ lineHeight: 1.35 }}>{opt}</span>
               {active && (
-                <svg className="w-3 h-3 shrink-0 text-[#F4A024]" fill="currentColor" viewBox="0 0 20 20">
+                <svg style={{ width: 13, height: 13, color: "var(--andi-gold)", flexShrink: 0 }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
               )}
@@ -34,22 +30,16 @@ function FilterGroup({ title, options, selected, onToggle }) {
 export default function FilterPanel({ filters, onFilterChange, onClear, hasActiveFilters }) {
   const toggle = (key, value) => {
     const current = filters[key];
-    const updated = current.includes(value)
-      ? current.filter((v) => v !== value)
-      : [...current, value];
-    onFilterChange(key, updated);
+    onFilterChange(key, current.includes(value) ? current.filter((v) => v !== value) : [...current, value]);
   };
 
   return (
-    <aside className="w-56 shrink-0">
-      <div className="glass rounded-2xl p-4 sticky top-[105px] shadow-md">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="font-bold text-[#002147]/90 text-sm tracking-tight">Filtros</h2>
+    <aside style={{ width: 210, flexShrink: 0 }}>
+      <div className="apple-card" style={{ padding: "20px 12px", position: "sticky", top: 106 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 20, padding: "0 12px" }}>
+          <span style={{ fontSize: 15, fontWeight: 700, color: "var(--apple-dark)", letterSpacing: "-0.02em" }}>Filtros</span>
           {hasActiveFilters && (
-            <button
-              onClick={onClear}
-              className="text-[10px] text-[#F4A024] font-semibold hover:text-[#c47d00] transition-colors"
-            >
+            <button onClick={onClear} style={{ fontSize: 12, color: "var(--andi-gold)", fontWeight: 600, background: "none", border: "none", cursor: "pointer", fontFamily: "inherit" }}>
               Limpiar
             </button>
           )}
