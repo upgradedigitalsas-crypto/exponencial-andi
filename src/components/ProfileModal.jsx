@@ -47,20 +47,21 @@ export default function ProfileModal({ profile, onClose }) {
   return (
     <div style={{
       position: "fixed", inset: 0, zIndex: 50,
-      display: "flex", alignItems: "center", justifyContent: "center", padding: 20,
+      overflowY: "auto",
+      padding: "24px 16px",
     }} onClick={onClose}>
       {/* Backdrop */}
       <div style={{
-        position: "absolute", inset: 0,
+        position: "fixed", inset: 0,
         background: "rgba(0,0,0,0.45)",
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
       }} />
 
-      {/* Sheet */}
+      {/* Sheet — centrado con margin auto para que el scroll funcione */}
       <div style={{
         position: "relative", background: "#fff", borderRadius: 28,
-        maxWidth: 600, width: "100%", maxHeight: "90vh", overflowY: "auto",
+        maxWidth: 600, width: "100%", margin: "0 auto",
         boxShadow: "0 40px 80px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.04)",
       }} onClick={(e) => e.stopPropagation()}>
 
