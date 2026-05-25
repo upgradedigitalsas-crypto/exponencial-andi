@@ -116,7 +116,6 @@ export default function App() {
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
       <Header />
-      <SearchBar value={query} onChange={setQuery} total={profiles.length} filtered={filtered.length} />
 
       {/* Hero */}
       <section style={{ background: "linear-gradient(135deg, #1e1b4b 0%, #4C1D95 60%, #6D28D9 100%)", padding: "64px 20px 72px", position: "relative", overflow: "hidden" }}>
@@ -148,6 +147,12 @@ export default function App() {
 
       {/* Main */}
       <main style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 20px 80px" }}>
+
+        {/* Search bar — full width, above filters+grid */}
+        <div style={{ marginBottom: 24 }}>
+          <SearchBar value={query} onChange={setQuery} total={profiles.length} filtered={filtered.length} />
+        </div>
+
         <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
 
           {/* Desktop sidebar */}
