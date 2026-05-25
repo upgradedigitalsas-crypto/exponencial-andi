@@ -318,7 +318,7 @@ export default function ProfileModal({ profile, onClose }) {
           </div>
 
           {/* ── Contenido scrolleable ── */}
-          <div style={{ flex: 1, overflowY: "auto", padding: step === "profile" ? "52px 24px 28px" : "24px 24px 28px" }}>
+          <div style={{ flex: 1, overflowY: "auto", padding: "52px 24px 28px" }}>
 
             {/* STEP: profile */}
             {step === "profile" && (
