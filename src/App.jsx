@@ -118,7 +118,7 @@ export default function App() {
       <SearchBar value={query} onChange={setQuery} total={profiles.length} filtered={filtered.length} />
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(160deg, #0f0f1a 0%, #1e1b4b 50%, #2e1065 100%)", padding: "64px 20px 72px", position: "relative", overflow: "hidden" }}>
+      <section style={{ background: "#0f0f1a", padding: "64px 20px 72px", position: "relative", overflow: "hidden" }}>
 
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 12, marginBottom: 52 }}>
