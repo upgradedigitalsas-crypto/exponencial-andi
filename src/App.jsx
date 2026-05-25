@@ -156,6 +156,56 @@ export default function App() {
         </div>
       </section>
 
+      {/* ¿Qué es Exponencial? */}
+      <section style={{ background: "#fff", borderBottom: "1px solid var(--border)", padding: "40px 20px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
+            {/* Qué es */}
+            <div style={{ padding: "24px", background: "var(--brand-purple-xlight)", borderRadius: 16, border: "1px solid rgba(124,58,237,0.1)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--brand-purple)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <svg style={{ width: 18, height: 18, color: "#fff" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "var(--text-primary)" }}>¿Qué es Exponencial?</h3>
+              </div>
+              <p style={{ margin: 0, fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7 }}>
+                Programa de formación en liderazgo y gobierno corporativo para empresas de alto crecimiento, impulsado por ANDI Antioquia. Certifica líderes empresariales con herramientas para transformar sus organizaciones.
+              </p>
+            </div>
+            {/* Banco de HVs */}
+            <div style={{ padding: "24px", background: "#f0fdf4", borderRadius: 16, border: "1px solid rgba(22,101,52,0.1)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                <div style={{ width: 36, height: 36, borderRadius: 10, background: "#16a34a", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <svg style={{ width: 18, height: 18, color: "#fff" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "var(--text-primary)" }}>Directorio de Talento</h3>
+              </div>
+              <p style={{ margin: 0, fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7 }}>
+                Conecta con los {profiles.length} líderes certificados de la cohorte 2025. Directorio diseñado para facilitar alianzas, networking y colaboración entre empresas de alto impacto en Antioquia.
+              </p>
+            </div>
+            {/* CESA */}
+            <div style={{ padding: "24px", background: "#fdf4ff", borderRadius: 16, border: "1px solid rgba(109,40,217,0.1)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+                <div style={{ width: 36, height: 36, borderRadius: 10, background: "#6d28d9", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <svg style={{ width: 18, height: 18, color: "#fff" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </div>
+                <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "var(--text-primary)" }}>Sello CESA</h3>
+              </div>
+              <p style={{ margin: 0, fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7 }}>
+                Programa certificado por el Centro de Estudios en Gobierno Corporativo del <strong>CESA</strong>, garantizando el más alto estándar académico en formación de líderes empresariales colombianos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main */}
       <main style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 20px 80px" }}>
         <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
@@ -266,7 +316,49 @@ export default function App() {
         </div>
       </main>
 
-      <footer style={{ borderTop: "1px solid var(--border)", padding: "20px 20px", textAlign: "center" }}>
+      {/* Partner logos */}
+      <section style={{ borderTop: "1px solid var(--border)", background: "#fff", padding: "40px 20px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--text-tertiary)", textAlign: "center", marginBottom: 28 }}>
+            Aliados del Programa
+          </div>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "clamp(24px, 5vw, 60px)", flexWrap: "wrap" }}>
+            {/* ANDI Antioquia */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, opacity: 0.75 }}>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#002147", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ fontSize: 9, fontWeight: 900, color: "#fff", letterSpacing: "0.04em" }}>ANDI</span>
+              </div>
+              <span style={{ fontSize: 10, fontWeight: 600, color: "var(--text-secondary)", textAlign: "center", maxWidth: 80, lineHeight: 1.3 }}>ANDI Antioquia</span>
+            </div>
+            <div style={{ width: 1, height: 40, background: "var(--border)" }} />
+            {/* ADF */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, opacity: 0.75 }}>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#1e3a5f", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ fontSize: 10, fontWeight: 900, color: "#fff", letterSpacing: "0.04em" }}>ADF</span>
+              </div>
+              <span style={{ fontSize: 10, fontWeight: 600, color: "var(--text-secondary)", textAlign: "center", maxWidth: 80, lineHeight: 1.3 }}>ADF</span>
+            </div>
+            <div style={{ width: 1, height: 40, background: "var(--border)" }} />
+            {/* Cámara de Comercio */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, opacity: 0.75 }}>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#c0392b", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ fontSize: 8, fontWeight: 900, color: "#fff", letterSpacing: "0.02em", textAlign: "center", lineHeight: 1.2 }}>CCM</span>
+              </div>
+              <span style={{ fontSize: 10, fontWeight: 600, color: "var(--text-secondary)", textAlign: "center", maxWidth: 80, lineHeight: 1.3 }}>Cámara de Comercio</span>
+            </div>
+            <div style={{ width: 1, height: 40, background: "var(--border)" }} />
+            {/* CESA */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, opacity: 0.75 }}>
+              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#6d28d9", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ fontSize: 10, fontWeight: 900, color: "#fff", letterSpacing: "0.04em" }}>CESA</span>
+              </div>
+              <span style={{ fontSize: 10, fontWeight: 600, color: "var(--text-secondary)", textAlign: "center", maxWidth: 80, lineHeight: 1.3 }}>CESA · Sello de Calidad</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer style={{ borderTop: "1px solid var(--border)", padding: "20px 20px", textAlign: "center", background: "var(--bg)" }}>
         <p style={{ margin: 0, fontSize: 12, color: "var(--text-tertiary)", letterSpacing: "0.04em" }}>
           © {new Date().getFullYear()} Programa Exponencial · ANDI Seccional Antioquia
         </p>

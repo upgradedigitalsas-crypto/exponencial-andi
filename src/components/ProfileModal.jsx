@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const CERT_PALETTE = {
   "Liderazgo Exponencial":       { bg: "#ede9fe", color: "#5b21b6" },
@@ -33,6 +33,8 @@ function Avatar({ photo, name }) {
 }
 
 export default function ProfileModal({ profile, onClose }) {
+  const [photoZoom, setPhotoZoom] = useState(false);
+
   useEffect(() => {
     const handleKey = (e) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", handleKey);
@@ -110,8 +112,12 @@ export default function ProfileModal({ profile, onClose }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          {/* Avatar */}
-          <div style={{ position: "absolute", bottom: -40, left: 24 }}>
+          {/* Avatar — clickable para ampliar */}
+          <div
+            style={{ position: "absolute", bottom: -40, left: 24, cursor: profile.photo ? "zoom-in" : "default" }}
+            onClick={(e) => { if (profile.photo) { e.stopPropagation(); setPhotoZoom(true); } }}
+            title={profile.photo ? "Clic para ampliar foto" : ""}
+          >
             <Avatar photo={profile.photo} name={profile.name} />
           </div>
         </div>
@@ -220,6 +226,48 @@ export default function ProfileModal({ profile, onClose }) {
           )}
         </div>
       </div>
+
+      {/* Photo lightbox */}
+      {photoZoom && profile.photo && (
+        <div
+          style={{
+            position: "fixed", inset: 0, zIndex: 100,
+            background: "rgba(0,0,0,0.92)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            cursor: "zoom-out",
+          }}
+          onClick={() => setPhotoZoom(false)}
+        >
+          <img
+            src={profile.photo}
+            alt={profile.name}
+            style={{
+              maxWidth: "min(480px, 90vw)",
+              maxHeight: "80dvh",
+              borderRadius: 20,
+              objectFit: "cover",
+              objectPosition: "top",
+              boxShadow: "0 32px 80px rgba(0,0,0,0.5)",
+            }}
+          />
+          <button
+            onClick={() => setPhotoZoom(false)}
+            style={{
+              position: "absolute", top: 20, right: 20,
+              width: 36, height: 36, borderRadius: "50%",
+              background: "rgba(255,255,255,0.15)", border: "none", cursor: "pointer",
+              display: "flex", alignItems: "center", justifyContent: "center", color: "#fff",
+            }}
+          >
+            <svg style={{ width: 16, height: 16 }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div style={{ position: "absolute", bottom: 24, color: "rgba(255,255,255,0.5)", fontSize: 12 }}>
+            {profile.name}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
