@@ -83,7 +83,7 @@ function MobileFilters({ filters, onFilterChange, onClear, hasActive, open, onCl
 function StatCard({ value, label }) {
   return (
     <div style={{ textAlign: "center" }}>
-      <div style={{ fontSize: "clamp(36px, 5vw, 52px)", fontWeight: 800, letterSpacing: "-0.04em", color: "var(--andi-gold)", lineHeight: 1 }}>{value}</div>
+      <div style={{ fontSize: "clamp(36px, 5vw, 52px)", fontWeight: 800, letterSpacing: "-0.04em", color: "#a78bfa", lineHeight: 1 }}>{value}</div>
       <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 5, textTransform: "uppercase", letterSpacing: "0.1em" }}>{label}</div>
     </div>
   );
@@ -119,12 +119,12 @@ export default function App() {
 
       {/* Hero */}
       <section style={{ background: "#0d0d12", padding: "64px 20px 72px", position: "relative", overflow: "hidden" }}>
-        {/* Blur blobs */}
+        {/* Blur blobs — brand purple */}
         <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
-          <div style={{ position: "absolute", top: "-20%", right: "-10%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(244,160,36,0.5) 0%, transparent 70%)", filter: "blur(90px)" }} />
-          <div style={{ position: "absolute", top: "10%", left: "-15%", width: 420, height: 420, borderRadius: "50%", background: "radial-gradient(circle, rgba(0,64,128,0.6) 0%, transparent 70%)", filter: "blur(80px)" }} />
-          <div style={{ position: "absolute", bottom: "-30%", left: "30%", width: 460, height: 460, borderRadius: "50%", background: "radial-gradient(circle, rgba(109,40,217,0.35) 0%, transparent 65%)", filter: "blur(100px)" }} />
-          <div style={{ position: "absolute", top: "0", left: "42%", width: 280, height: 280, borderRadius: "50%", background: "radial-gradient(circle, rgba(14,165,233,0.2) 0%, transparent 70%)", filter: "blur(60px)" }} />
+          <div style={{ position: "absolute", top: "-20%", right: "-10%", width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.55) 0%, transparent 70%)", filter: "blur(90px)" }} />
+          <div style={{ position: "absolute", top: "10%", left: "-15%", width: 420, height: 420, borderRadius: "50%", background: "radial-gradient(circle, rgba(76,29,149,0.65) 0%, transparent 70%)", filter: "blur(80px)" }} />
+          <div style={{ position: "absolute", bottom: "-30%", left: "30%", width: 460, height: 460, borderRadius: "50%", background: "radial-gradient(circle, rgba(124,58,237,0.4) 0%, transparent 65%)", filter: "blur(100px)" }} />
+          <div style={{ position: "absolute", top: "0", left: "42%", width: 280, height: 280, borderRadius: "50%", background: "radial-gradient(circle, rgba(196,181,253,0.18) 0%, transparent 70%)", filter: "blur(60px)" }} />
         </div>
         {/* Noise */}
         <div style={{
@@ -137,7 +137,7 @@ export default function App() {
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 12, marginBottom: 52 }}>
             <h1 style={{ margin: 0, fontSize: "clamp(32px, 5vw, 60px)", fontWeight: 800, letterSpacing: "-0.04em", color: "#f5f5f7", lineHeight: 1.1 }}>
               Directorio de Talento<br />
-              <span style={{ color: "var(--andi-gold)" }}>Exponencial</span>
+              <span style={{ color: "#a78bfa" }}>Exponencial</span>
             </h1>
             <p style={{ margin: 0, fontSize: "clamp(14px, 2vw, 17px)", color: "rgba(255,255,255,0.45)", maxWidth: 480, lineHeight: 1.65, fontWeight: 400 }}>
               Conecta con líderes certificados listos para impulsar la transformación de tu empresa.
@@ -183,7 +183,7 @@ export default function App() {
                 Filtros
                 {totalActive > 0 && (
                   <span style={{
-                    background: "var(--andi-navy)", color: "#fff",
+                    background: "var(--brand-purple)", color: "#fff",
                     fontSize: 10, fontWeight: 800, width: 17, height: 17,
                     borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
                   }}>
@@ -199,7 +199,7 @@ export default function App() {
                 {[...filters.certifications, ...filters.sectors, ...filters.roles].map((tag) => (
                   <span key={tag} style={{
                     display: "inline-flex", alignItems: "center", gap: 5,
-                    background: "var(--andi-navy)", color: "#fff",
+                    background: "var(--brand-purple)", color: "#fff",
                     fontSize: 11, fontWeight: 600, padding: "4px 10px 4px 12px", borderRadius: 100,
                   }}>
                     {tag}

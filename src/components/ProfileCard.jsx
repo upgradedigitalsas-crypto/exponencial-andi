@@ -1,10 +1,10 @@
 const CERT_PALETTE = {
-  "Liderazgo Exponencial":       { bg: "#e8f0fe", color: "#1a56db" },
-  "Transformación Digital":      { bg: "#ede9fe", color: "#6d28d9" },
+  "Liderazgo Exponencial":       { bg: "#ede9fe", color: "#5b21b6" },
+  "Transformación Digital":      { bg: "#e0e7ff", color: "#3730a3" },
   "Innovación y Tendencias":     { bg: "#fef3c7", color: "#92400e" },
   "Gestión del Cambio":          { bg: "#d1fae5", color: "#065f46" },
   "Sostenibilidad Empresarial":  { bg: "#dcfce7", color: "#166534" },
-  "Estrategia y Competitividad": { bg: "#e0e7ff", color: "#3730a3" },
+  "Estrategia y Competitividad": { bg: "#f3e8ff", color: "#6d28d9" },
   "Comunicación Ejecutiva":      { bg: "#fce7f3", color: "#9d174d" },
   "Mentalidad de Crecimiento":   { bg: "#ffedd5", color: "#9a3412" },
 };
@@ -15,7 +15,7 @@ function Avatar({ photo, name }) {
     return (
       <div style={{
         width: 52, height: 52, borderRadius: 14, flexShrink: 0,
-        background: "linear-gradient(135deg, #002147 0%, #004080 100%)",
+        background: "linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)",
         display: "flex", alignItems: "center", justifyContent: "center",
         color: "#fff", fontSize: 17, fontWeight: 700,
       }}>{initials}</div>
@@ -32,7 +32,7 @@ function Avatar({ photo, name }) {
       }} />
       <div style={{
         display: "none", width: 52, height: 52, borderRadius: 14, position: "absolute", inset: 0,
-        background: "linear-gradient(135deg, #002147 0%, #004080 100%)",
+        background: "linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)",
         alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 17, fontWeight: 700,
       }}>{initials}</div>
     </div>
@@ -53,10 +53,10 @@ export default function ProfileCard({ profile, onClick }) {
           <div style={{ fontSize: 14, fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.3 }}>
             {profile.name}
           </div>
-          <div style={{ fontSize: 12, fontWeight: 600, color: "var(--andi-gold)", marginTop: 2 }}>
+          <div style={{ fontSize: 12, fontWeight: 600, color: "var(--brand-purple)", marginTop: 2 }}>
             {profile.role}
           </div>
-          <div style={{ fontSize: 11, color: "var(--text-tertiary)", marginTop: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+          <div style={{ fontSize: 11, color: "var(--text-tertiary)", marginTop: 2, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
             {profile.company} · {profile.sector}
           </div>
         </div>
@@ -86,8 +86,7 @@ export default function ProfileCard({ profile, onClick }) {
         {profile.certifications.length > 2 && (
           <span style={{
             fontSize: 10, fontWeight: 600, padding: "3px 9px", borderRadius: 100,
-            background: "var(--bg)", color: "var(--text-tertiary)",
-            border: "1px solid var(--border)",
+            background: "var(--bg)", color: "var(--text-tertiary)", border: "1px solid var(--border)",
           }}>
             +{profile.certifications.length - 2}
           </span>

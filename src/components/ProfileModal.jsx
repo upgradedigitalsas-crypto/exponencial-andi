@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 
 const CERT_PALETTE = {
-  "Liderazgo Exponencial":       { bg: "#e8f0fe", color: "#1a56db" },
-  "Transformación Digital":      { bg: "#ede9fe", color: "#6d28d9" },
+  "Liderazgo Exponencial":       { bg: "#ede9fe", color: "#5b21b6" },
+  "Transformación Digital":      { bg: "#e0e7ff", color: "#3730a3" },
   "Innovación y Tendencias":     { bg: "#fef3c7", color: "#92400e" },
   "Gestión del Cambio":          { bg: "#d1fae5", color: "#065f46" },
   "Sostenibilidad Empresarial":  { bg: "#dcfce7", color: "#166534" },
-  "Estrategia y Competitividad": { bg: "#e0e7ff", color: "#3730a3" },
+  "Estrategia y Competitividad": { bg: "#f3e8ff", color: "#6d28d9" },
   "Comunicación Ejecutiva":      { bg: "#fce7f3", color: "#9d174d" },
   "Mentalidad de Crecimiento":   { bg: "#ffedd5", color: "#9a3412" },
 };
@@ -17,7 +17,7 @@ function Avatar({ photo, name }) {
     return (
       <div style={{
         width: 80, height: 80, borderRadius: 20, flexShrink: 0,
-        background: "linear-gradient(135deg, #002147 0%, #004080 100%)",
+        background: "linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)",
         display: "flex", alignItems: "center", justifyContent: "center",
         color: "#fff", fontSize: 24, fontWeight: 700,
       }}>{initials}</div>
@@ -46,50 +46,59 @@ export default function ProfileModal({ profile, onClose }) {
   if (!profile) return null;
 
   return (
+    /* Outer — scroll container, NOT flexbox so top never clips */
     <div
-      style={{ position: "fixed", inset: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "center", padding: "20px 16px" }}
+      style={{
+        position: "fixed", inset: 0, zIndex: 50,
+        overflowY: "auto",
+        padding: "32px 16px 40px",
+      }}
       onClick={onClose}
     >
       {/* Backdrop */}
       <div style={{
         position: "fixed", inset: 0,
-        background: "rgba(0,0,0,0.4)",
-        backdropFilter: "blur(8px)",
-        WebkitBackdropFilter: "blur(8px)",
+        background: "rgba(0,0,0,0.45)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
       }} />
 
-      {/* Sheet */}
+      {/* Sheet — grows with content, outer scrolls */}
       <div
+        className="modal-sheet"
         style={{
-          position: "relative", background: "#fff",
-          borderRadius: 20, maxWidth: 560, width: "100%",
+          position: "relative",
+          background: "#fff",
+          borderRadius: 20,
+          maxWidth: 560,
+          width: "100%",
+          margin: "0 auto",
           border: "1px solid rgba(0,0,0,0.06)",
-          boxShadow: "0 32px 80px rgba(0,0,0,0.2)",
+          boxShadow: "0 32px 80px rgba(0,0,0,0.22)",
           overflow: "hidden",
-          display: "flex", flexDirection: "column",
-          maxHeight: "calc(100dvh - 40px)",
         }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Banner */}
         <div style={{
-          height: 100, flexShrink: 0,
-          background: "linear-gradient(135deg, #0d0d12 0%, #002147 60%, #003d7a 100%)",
+          height: 110,
+          background: "linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 55%, #3b0764 100%)",
           position: "relative", overflow: "hidden",
         }}>
+          {/* Purple blob */}
           <div style={{
-            position: "absolute", top: "-40%", right: "-10%", width: 300, height: 300,
+            position: "absolute", top: "-30%", right: "-5%", width: 280, height: 280,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(244,160,36,0.45) 0%, transparent 70%)",
-            filter: "blur(60px)",
-          }} />
-          <div style={{
-            position: "absolute", bottom: "-40%", left: "-5%", width: 200, height: 200,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(109,40,217,0.35) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(139,92,246,0.55) 0%, transparent 70%)",
             filter: "blur(50px)",
           }} />
-          {/* Close */}
+          <div style={{
+            position: "absolute", bottom: "-40%", left: "5%", width: 200, height: 200,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(76,29,149,0.6) 0%, transparent 70%)",
+            filter: "blur(45px)",
+          }} />
+          {/* Close button */}
           <button onClick={onClose} style={{
             position: "absolute", top: 14, right: 14,
             width: 28, height: 28, borderRadius: "50%",
@@ -101,33 +110,34 @@ export default function ProfileModal({ profile, onClose }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          {/* Avatar anchor */}
+          {/* Avatar */}
           <div style={{ position: "absolute", bottom: -40, left: 24 }}>
             <Avatar photo={profile.photo} name={profile.name} />
           </div>
         </div>
 
-        <div style={{ padding: "52px 24px 28px", overflowY: "auto", flex: 1 }}>
+        {/* Content */}
+        <div style={{ padding: "52px 24px 28px" }}>
           {/* Identity */}
           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 18, flexWrap: "wrap" }}>
             <div>
               <h2 style={{ margin: 0, fontSize: 22, fontWeight: 800, letterSpacing: "-0.03em", color: "var(--text-primary)" }}>
                 {profile.name}
               </h2>
-              <div style={{ fontSize: 14, fontWeight: 600, color: "var(--andi-gold)", marginTop: 2 }}>{profile.role}</div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: "var(--brand-purple)", marginTop: 3 }}>{profile.role}</div>
               <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
                 <span style={{ fontSize: 12, color: "var(--text-secondary)" }}>{profile.company}</span>
-                <span style={{ color: "var(--border)", fontSize: 12 }}>·</span>
+                <span style={{ color: "var(--border)" }}>·</span>
                 <span style={{ fontSize: 12, color: "var(--text-tertiary)" }}>{profile.sector}</span>
               </div>
             </div>
             <span style={{
               display: "inline-flex", alignItems: "center", gap: 5,
-              background: "var(--andi-gold-light)", color: "#b36200",
+              background: "var(--brand-purple-light)", color: "var(--brand-purple)",
               fontSize: 11, fontWeight: 700, padding: "5px 12px", borderRadius: 100,
-              border: "1px solid rgba(244,160,36,0.2)", whiteSpace: "nowrap",
+              border: "1px solid rgba(124,58,237,0.2)", whiteSpace: "nowrap",
             }}>
-              ★ Exponencial ANDI
+              ✦ Exponencial ANDI
             </span>
           </div>
 
