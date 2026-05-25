@@ -89,21 +89,9 @@ export default function ProfileModal({ profile, onClose }) {
           {/* ── Banner (no scrollea) ── */}
           <div style={{
             height: 110, flexShrink: 0,
-            background: "linear-gradient(135deg, #0f0f0f 0%, #1e1b4b 55%, #3b0764 100%)",
+            background: "linear-gradient(135deg, #1e1b4b 0%, #4C1D95 100%)",
             position: "relative", overflow: "hidden",
           }}>
-            <div style={{
-              position: "absolute", top: "-30%", right: "-5%", width: 280, height: 280,
-              borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(139,92,246,0.55) 0%, transparent 70%)",
-              filter: "blur(50px)",
-            }} />
-            <div style={{
-              position: "absolute", bottom: "-40%", left: "5%", width: 200, height: 200,
-              borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(76,29,149,0.6) 0%, transparent 70%)",
-              filter: "blur(45px)",
-            }} />
             {/* Close */}
             <button onClick={onClose} style={{
               position: "absolute", top: 14, right: 14,
