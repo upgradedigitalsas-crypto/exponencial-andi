@@ -5,6 +5,7 @@ import SearchBar from "./components/SearchBar";
 import FilterPanel from "./components/FilterPanel";
 import ProfileCard from "./components/ProfileCard";
 import ProfileModal from "./components/ProfileModal";
+import AboutSection from "./components/AboutSection";
 
 const EMPTY_FILTERS = { certifications: [], sectors: [], roles: [] };
 const CERT_OPTS = ["Liderazgo Exponencial","Transformación Digital","Innovación y Tendencias","Gestión del Cambio","Sostenibilidad Empresarial","Estrategia y Competitividad","Comunicación Ejecutiva","Mentalidad de Crecimiento"];
@@ -143,55 +144,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ¿Qué es Exponencial? */}
-      <section style={{ background: "#fff", borderBottom: "1px solid var(--border)", padding: "40px 20px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
-            {/* Qué es */}
-            <div style={{ padding: "24px", background: "var(--brand-purple-xlight)", borderRadius: 16, border: "1px solid rgba(124,58,237,0.1)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--brand-purple)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg style={{ width: 18, height: 18, color: "#fff" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "var(--text-primary)" }}>¿Qué es Exponencial?</h3>
-              </div>
-              <p style={{ margin: 0, fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7 }}>
-                Programa de formación en liderazgo y gobierno corporativo para empresas de alto crecimiento, impulsado por ANDI Antioquia. Certifica líderes empresariales con herramientas para transformar sus organizaciones.
-              </p>
-            </div>
-            {/* Banco de HVs */}
-            <div style={{ padding: "24px", background: "#f0fdf4", borderRadius: 16, border: "1px solid rgba(22,101,52,0.1)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                <div style={{ width: 36, height: 36, borderRadius: 10, background: "#16a34a", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg style={{ width: 18, height: 18, color: "#fff" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "var(--text-primary)" }}>Directorio de Talento</h3>
-              </div>
-              <p style={{ margin: 0, fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7 }}>
-                Conecta con los {profiles.length} líderes certificados de la cohorte 2025. Directorio diseñado para facilitar alianzas, networking y colaboración entre empresas de alto impacto en Antioquia.
-              </p>
-            </div>
-            {/* CESA */}
-            <div style={{ padding: "24px", background: "#fdf4ff", borderRadius: 16, border: "1px solid rgba(109,40,217,0.1)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                <div style={{ width: 36, height: 36, borderRadius: 10, background: "#6d28d9", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg style={{ width: 18, height: 18, color: "#fff" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                </div>
-                <h3 style={{ margin: 0, fontSize: 15, fontWeight: 700, color: "var(--text-primary)" }}>Sello CESA</h3>
-              </div>
-              <p style={{ margin: 0, fontSize: 13, color: "var(--text-secondary)", lineHeight: 1.7 }}>
-                Programa certificado por el Centro de Estudios en Gobierno Corporativo del <strong>CESA</strong>, garantizando el más alto estándar académico en formación de líderes empresariales colombianos.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutSection />
 
       {/* Main */}
       <main style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 20px 80px" }}>
