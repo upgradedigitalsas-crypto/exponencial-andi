@@ -84,7 +84,7 @@ function MobileFilters({ filters, onFilterChange, onClear, hasActive, open, onCl
 function StatCard({ value, label }) {
   return (
     <div style={{ textAlign: "center" }}>
-      <div style={{ fontSize: "clamp(36px, 5vw, 52px)", fontWeight: 800, letterSpacing: "-0.04em", color: "#a78bfa", lineHeight: 1 }}>{value}</div>
+      <div style={{ fontSize: "clamp(36px, 5vw, 52px)", fontWeight: 800, letterSpacing: "-0.04em", color: "#fff", lineHeight: 1 }}>{value}</div>
       <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 5, textTransform: "uppercase", letterSpacing: "0.1em" }}>{label}</div>
     </div>
   );
