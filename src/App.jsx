@@ -130,17 +130,17 @@ export default function App() {
         }} />
 
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 12, marginBottom: 52 }}>
+          <div className="hero-t1" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 12, marginBottom: 52 }}>
             <h1 style={{ margin: 0, fontSize: "clamp(32px, 5vw, 60px)", fontWeight: 800, letterSpacing: "-0.04em", color: "#f5f5f7", lineHeight: 1.1 }}>
               Directorio de Talento<br />
               <span style={{ color: "#a78bfa" }}>Exponencial</span>
             </h1>
-            <p style={{ margin: 0, fontSize: "clamp(14px, 2vw, 17px)", color: "rgba(255,255,255,0.45)", maxWidth: 480, lineHeight: 1.65, fontWeight: 400 }}>
+            <p className="hero-t2" style={{ margin: 0, fontSize: "clamp(14px, 2vw, 17px)", color: "rgba(255,255,255,0.45)", maxWidth: 480, lineHeight: 1.65, fontWeight: 400 }}>
               Conecta con líderes certificados listos para impulsar la transformación de tu empresa.
             </p>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "center", gap: "clamp(24px, 5vw, 72px)", flexWrap: "wrap", alignItems: "center" }}>
+          <div className="hero-t3" style={{ display: "flex", justifyContent: "center", gap: "clamp(24px, 5vw, 72px)", flexWrap: "wrap", alignItems: "center" }}>
             <StatCard value={profiles.length} label="Perfiles" />
             <div style={{ width: 1, background: "rgba(255,255,255,0.07)", alignSelf: "stretch", minHeight: 40 }} />
             <StatCard value="8" label="Certificaciones" />
@@ -158,7 +158,7 @@ export default function App() {
       <main style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 20px 80px" }}>
 
         {/* Search bar — full width, above filters+grid */}
-        <div style={{ marginBottom: 24 }}>
+        <div className="anim-fadein" style={{ marginBottom: 24 }}>
           <SearchBar value={query} onChange={setQuery} total={profiles.length} filtered={filtered.length} />
         </div>
 
@@ -261,8 +261,8 @@ export default function App() {
               }}
                 className="sm:grid-cols-2 xl:grid-cols-3"
               >
-                {filtered.map((profile) => (
-                  <ProfileCard key={profile.id} profile={profile} onClick={setSelected} />
+                {filtered.map((profile, i) => (
+                  <ProfileCard key={profile.id} profile={profile} onClick={setSelected} index={i} />
                 ))}
               </div>
             )}

@@ -39,12 +39,13 @@ function Avatar({ photo, name }) {
   );
 }
 
-export default function ProfileCard({ profile, onClick }) {
+export default function ProfileCard({ profile, onClick, index = 0 }) {
+  const delay = Math.min(index * 55, 420);
   return (
     <article
       onClick={() => onClick(profile)}
       className="flat-card fade-in"
-      style={{ padding: "18px 18px 16px", cursor: "pointer", display: "flex", flexDirection: "column", gap: 12 }}
+      style={{ padding: "18px 18px 16px", cursor: "pointer", display: "flex", flexDirection: "column", gap: 12, animationDelay: `${delay}ms` }}
     >
       {/* Header */}
       <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
