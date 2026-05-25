@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+const base = import.meta.env.BASE_URL;
 
 const CERT_PALETTE = {
   "Liderazgo Exponencial":       { bg: "#ede9fe", color: "#5b21b6" },
@@ -90,7 +91,7 @@ export default function ProfileModal({ profile, onClose }) {
           <div style={{
             height: 110, flexShrink: 0,
             background: "linear-gradient(135deg, #1e1b4b 0%, #4C1D95 100%)",
-            position: "relative", overflow: "hidden",
+            position: "relative",
           }}>
             {/* Close */}
             <button onClick={onClose} style={{
@@ -129,14 +130,11 @@ export default function ProfileModal({ profile, onClose }) {
                   <span style={{ fontSize: 12, color: "var(--text-tertiary)" }}>{profile.sector}</span>
                 </div>
               </div>
-              <span style={{
-                display: "inline-flex", alignItems: "center", gap: 5,
-                background: "var(--brand-purple-light)", color: "var(--brand-purple)",
-                fontSize: 11, fontWeight: 700, padding: "5px 12px", borderRadius: 100,
-                border: "1px solid rgba(124,58,237,0.2)", whiteSpace: "nowrap",
-              }}>
-                ✦ Exponencial ANDI
-              </span>
+              <img
+                src={`${base}logo-exponencial.png`}
+                alt="Exponencial"
+                style={{ height: 36, width: "auto", objectFit: "contain", flexShrink: 0 }}
+              />
             </div>
 
             <div style={{ height: 1, background: "var(--border)", marginBottom: 18 }} />
