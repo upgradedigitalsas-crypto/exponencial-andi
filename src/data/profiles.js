@@ -51,7 +51,7 @@ export const profiles = [
     certifications: ["Liderazgo Exponencial", "Estrategia y Competitividad", "Gestión del Cambio"],
     skills: ["Liderazgo estratégico", "Gestión de equipos", "Consultoría B2B", "Desarrollo organizacional"],
     bio: "Especialista en transformación organizacional con amplia experiencia en consultoría empresarial para el sector industrial colombiano.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/adriana-lopez-hoyos-69737670/", email: "",
   },
   {
     id: 2,
@@ -63,7 +63,7 @@ export const profiles = [
     certifications: ["Transformación Digital", "Comunicación Ejecutiva", "Mentalidad de Crecimiento"],
     skills: ["Marketing estratégico", "Comunicaciones corporativas", "Branding", "Desarrollo de negocio"],
     bio: "Profesional de marketing con enfoque en estrategias de posicionamiento y crecimiento comercial para empresas del sector real.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/alejandra-zamora-zapata-a6560189/", email: "",
   },
   {
     id: 3,
@@ -75,7 +75,7 @@ export const profiles = [
     certifications: ["Innovación y Tendencias", "Transformación Digital", "Liderazgo Exponencial"],
     skills: ["Publicidad digital", "Creatividad e innovación", "Gestión de agencias", "Growth hacking"],
     bio: "Emprendedor y líder creativo con expertise en campañas digitales de alto impacto para marcas nacionales e internacionales.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/alejandro-franco-zuluaga-18049877/", email: "",
   },
   {
     id: 4,
@@ -99,7 +99,7 @@ export const profiles = [
     certifications: ["Transformación Digital", "Innovación y Tendencias", "Comunicación Ejecutiva"],
     skills: ["Legal Tech", "Derecho empresarial", "Innovación jurídica", "Gestión de contratos"],
     bio: "Abogado innovador especializado en la transformación digital del sector jurídico y en asesoría legal para empresas en expansión.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/daniel-leonardo-perdomo-gamboa-a7a2021a9/", email: "",
   },
   {
     id: 6,
@@ -111,7 +111,7 @@ export const profiles = [
     certifications: ["Mentalidad de Crecimiento", "Innovación y Tendencias", "Liderazgo Exponencial"],
     skills: ["Innovación empresarial", "Design thinking", "Emprendimiento", "Facilitación creativa"],
     bio: "Emprendedor y facilitador de procesos de innovación que acompaña a empresas en la creación de soluciones creativas y diferenciadoras.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/daniel-velez-2b77546b/", email: "",
   },
   {
     id: 7,
@@ -123,7 +123,7 @@ export const profiles = [
     certifications: ["Transformación Digital", "Liderazgo Exponencial", "Innovación y Tendencias"],
     skills: ["Desarrollo de software", "Arquitectura tecnológica", "IA y automatización", "Scrum / Agile"],
     bio: "Ingeniero y líder tecnológico con experiencia en el diseño e implementación de soluciones de software para la industria colombiana.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/davidgzg/", email: "",
   },
   {
     id: 8,
@@ -135,7 +135,7 @@ export const profiles = [
     certifications: ["Mentalidad de Crecimiento", "Liderazgo Exponencial", "Gestión del Cambio"],
     skills: ["Coaching empresarial", "Mindfulness organizacional", "Desarrollo de líderes", "Negocios conscientes"],
     bio: "Coach y consultor especializado en el desarrollo de líderes y organizaciones con enfoque en conciencia, propósito y crecimiento sostenible.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/excutivecoach-estrategia-liderazgo-emprendimiento-neurociencias-mentoring-innovation/", email: "",
   },
   {
     id: 9,
@@ -147,7 +147,7 @@ export const profiles = [
     certifications: ["Estrategia y Competitividad", "Gestión del Cambio", "Sostenibilidad Empresarial"],
     skills: ["Logística y cadena de suministro", "Operaciones industriales", "Gestión comercial", "Sostenibilidad"],
     bio: "Gerente con amplia trayectoria en el sector logístico e industrial, especializado en optimización de cadenas de suministro.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/ecorredo/", email: "",
   },
   {
     id: 10,
@@ -159,7 +159,7 @@ export const profiles = [
     certifications: ["Transformación Digital", "Innovación y Tendencias", "Liderazgo Exponencial"],
     skills: ["Desarrollo de software", "Consultoría tecnológica", "Transformación digital", "Cloud computing"],
     bio: "Líder en transformación digital con experiencia en el diseño de estrategias tecnológicas para empresas que buscan modernizar sus operaciones.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/julian-cruz-0a045726/", email: "",
   },
   {
     id: 11,
@@ -171,7 +171,7 @@ export const profiles = [
     certifications: ["Estrategia y Competitividad", "Liderazgo Exponencial"],
     skills: ["Gestión de proyectos", "Planeación estratégica", "Liderazgo", "Trabajo en equipo"],
     bio: "Profesional con experiencia en gestión de proyectos y desarrollo de estrategias empresariales en el ecosistema empresarial antioqueño.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/enrique-monsalve-ochoa-70353186/", email: "",
   },
   {
     id: 12,
@@ -183,7 +183,7 @@ export const profiles = [
     certifications: ["Sostenibilidad Empresarial", "Gestión del Cambio", "Estrategia y Competitividad"],
     skills: ["Manufactura textil", "Gestión de operaciones", "Mejora continua", "Sostenibilidad industrial"],
     bio: "Ejecutivo industrial con enfoque en la modernización y sostenibilidad de procesos manufactureros en la industria textil colombiana.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/esteban-tobon-urrea-6189b9186/", email: "",
   },
   {
     id: 13,
@@ -195,7 +195,7 @@ export const profiles = [
     certifications: ["Comunicación Ejecutiva", "Transformación Digital", "Mentalidad de Crecimiento"],
     skills: ["Social media marketing", "Comunicación digital", "Storytelling", "Community management"],
     bio: "Especialista en comunicación digital y social media con enfoque en crear narrativas que conectan marcas con comunidades de manera auténtica.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/gina-montes-964a7952/", email: "",
   },
   {
     id: 14,
@@ -207,7 +207,7 @@ export const profiles = [
     certifications: ["Liderazgo Exponencial", "Estrategia y Competitividad", "Gestión del Cambio"],
     skills: ["Servicios empresariales", "Gestión comercial", "Operaciones", "Desarrollo de negocio"],
     bio: "Empresario con trayectoria en el desarrollo y gestión de empresas de servicios especializados para el sector corporativo colombiano.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/hernan-corredor-13884a5b/", email: "",
   },
   {
     id: 15,
@@ -231,7 +231,7 @@ export const profiles = [
     certifications: ["Estrategia y Competitividad", "Comunicación Ejecutiva"],
     skills: ["Ventas B2B", "Desarrollo comercial", "Negociación", "Gestión de clientes"],
     bio: "Profesional comercial con amplia experiencia en el desarrollo de negocios y relaciones estratégicas en el mercado empresarial colombiano.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/jose-parra-94a5961/", email: "",
   },
   {
     id: 17,
@@ -243,7 +243,7 @@ export const profiles = [
     certifications: ["Sostenibilidad Empresarial", "Transformación Digital", "Innovación y Tendencias"],
     skills: ["Energías renovables", "Innovación energética", "Sostenibilidad", "Proyectos de infraestructura"],
     bio: "Líder en el sector energético con experiencia en el desarrollo de soluciones innovadoras para la transición energética y la sostenibilidad.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/juanestebanhr/", email: "",
   },
   {
     id: 18,
@@ -291,7 +291,7 @@ export const profiles = [
     certifications: ["Estrategia y Competitividad", "Mentalidad de Crecimiento"],
     skills: ["Finanzas corporativas", "Planeación financiera", "Control de gestión", "Análisis de datos"],
     bio: "Profesional financiera con experiencia en la estructuración y optimización de modelos de negocio para empresas del sector real.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/laura-marcela-martinez-pulgarin-a4960845/", email: "",
   },
   {
     id: 22,
@@ -303,7 +303,7 @@ export const profiles = [
     certifications: ["Transformación Digital", "Estrategia y Competitividad", "Liderazgo Exponencial"],
     skills: ["Nearshore IT", "Desarrollo de software", "Ventas tecnológicas", "Expansión de mercados"],
     bio: "Líder comercial en el sector tecnológico con experiencia en nearshore y en la expansión de empresas tech hacia mercados internacionales.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/leonardoarangobaena/", email: "",
   },
   {
     id: 23,
@@ -315,7 +315,7 @@ export const profiles = [
     certifications: ["Innovación y Tendencias", "Transformación Digital", "Mentalidad de Crecimiento"],
     skills: ["Tecnología educativa", "EdTech", "Innovación pedagógica", "Startups"],
     bio: "Emprendedora en el espacio de tecnología educativa, creando soluciones innovadoras que transforman la manera de aprender en Colombia.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/manuela-salinas-lotero/", email: "",
   },
   {
     id: 24,
@@ -327,7 +327,7 @@ export const profiles = [
     certifications: ["Gestión del Cambio", "Liderazgo Exponencial", "Comunicación Ejecutiva"],
     skills: ["Consultoría en RRHH", "Desarrollo organizacional", "Gestión del cambio", "Bienestar laboral"],
     bio: "Consultora especializada en gestión humana y desarrollo organizacional, acompañando empresas en sus procesos de transformación cultural.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/marcelariosurrea/", email: "",
   },
   {
     id: 25,
@@ -339,7 +339,7 @@ export const profiles = [
     certifications: ["Estrategia y Competitividad", "Comunicación Ejecutiva", "Liderazgo Exponencial"],
     skills: ["Consultoría estratégica", "Desarrollo de negocio", "Gestión de clientes", "Planeación estratégica"],
     bio: "Consultora estratégica con amplia experiencia en el acompañamiento a empresas para el diseño e implementación de planes de crecimiento.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/maria-clara-lopez-gomez-6133ba17/", email: "",
   },
   {
     id: 26,
@@ -351,7 +351,7 @@ export const profiles = [
     certifications: ["Transformación Digital", "Innovación y Tendencias", "Gestión del Cambio"],
     skills: ["Transformación digital", "Gestión de proyectos tech", "UX/UI", "Producto digital"],
     bio: "Profesional en transformación digital con experiencia en el diseño de experiencias digitales y en la implementación de proyectos tecnológicos.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/mariajosetasconmartinez/", email: "",
   },
   {
     id: 27,
@@ -399,7 +399,7 @@ export const profiles = [
     certifications: ["Liderazgo Exponencial", "Estrategia y Competitividad", "Mentalidad de Crecimiento"],
     skills: ["Emprendimiento", "Gestión empresarial", "Desarrollo de negocio", "Liderazgo"],
     bio: "Emprendedor con visión estratégica y experiencia en la creación y escalamiento de empresas de servicios especializados en Colombia.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/pablo-restrepo-ossa-7b203632/", email: "",
   },
   {
     id: 31,
@@ -411,7 +411,7 @@ export const profiles = [
     certifications: ["Transformación Digital", "Liderazgo Exponencial", "Innovación y Tendencias"],
     skills: ["Soluciones tecnológicas", "Emprendimiento tech", "Gestión de proyectos", "Innovación"],
     bio: "Empresario tecnológico comprometido con el desarrollo de soluciones digitales que mejoran la eficiencia operativa de las organizaciones.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/robinson-velasquez-ramirez-b0aaa8b8/", email: "",
   },
   {
     id: 32,
@@ -423,7 +423,7 @@ export const profiles = [
     certifications: ["Sostenibilidad Empresarial", "Innovación y Tendencias", "Transformación Digital"],
     skills: ["Energía renovable", "Sostenibilidad energética", "ESG", "Transición energética"],
     bio: "Experto en sostenibilidad energética con foco en la implementación de estrategias ESG y en la transición hacia fuentes de energía limpia.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/sebastian-heredia-quintana-00a562b5/", email: "",
   },
   {
     id: 33,
@@ -435,7 +435,7 @@ export const profiles = [
     certifications: ["Transformación Digital", "Estrategia y Competitividad", "Gestión del Cambio"],
     skills: ["Consultoría tecnológica", "Transformación digital", "Soluciones empresariales", "ERP / CRM"],
     bio: "Consultor tecnológico con expertise en la implementación de soluciones digitales integrales para empresas en proceso de modernización.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/sergio-alejandro-alvarez-lara/", email: "",
   },
   {
     id: 34,
@@ -447,7 +447,7 @@ export const profiles = [
     certifications: ["Estrategia y Competitividad", "Liderazgo Exponencial", "Sostenibilidad Empresarial"],
     skills: ["Gestión industrial", "Liderazgo", "Operaciones", "Cadena de valor"],
     bio: "Gerente con experiencia en la dirección de empresas industriales y en el desarrollo de estrategias de competitividad en el sector manufacturero.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/stibcasa/", email: "",
   },
   {
     id: 35,
@@ -459,7 +459,7 @@ export const profiles = [
     certifications: ["Sostenibilidad Empresarial", "Gestión del Cambio", "Estrategia y Competitividad"],
     skills: ["Moda y exportación", "Cadena de suministro", "Operaciones internacionales", "Sostenibilidad"],
     bio: "Ejecutiva en el sector de moda y exportaciones con amplia experiencia en la gestión operativa de procesos de comercio internacional.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/yanet-londono-490687225/", email: "",
   },
   {
     id: 36,
@@ -471,7 +471,7 @@ export const profiles = [
     certifications: ["Innovación y Tendencias", "Transformación Digital", "Mentalidad de Crecimiento"],
     skills: ["Biotecnología", "I+D", "Innovación científica", "Emprendimiento en ciencias"],
     bio: "Emprendedora en biotecnología liderando proyectos de investigación y desarrollo para crear soluciones innovadoras con impacto en salud y medio ambiente.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/yasminlopera/", email: "",
   },
   {
     id: 37,
@@ -483,6 +483,6 @@ export const profiles = [
     certifications: ["Liderazgo Exponencial", "Gestión del Cambio", "Mentalidad de Crecimiento"],
     skills: ["Ergonomía laboral", "Salud y seguridad en el trabajo", "Bienestar organizacional", "Consultoría"],
     bio: "Especialista en ergonomía y bienestar organizacional, ayudando a empresas a crear entornos de trabajo más seguros, saludables y productivos.",
-    linkedin: "", email: "",
+    linkedin: "https://www.linkedin.com/in/yordan-rodriguez-phd-cpe/", email: "",
   },
 ];
