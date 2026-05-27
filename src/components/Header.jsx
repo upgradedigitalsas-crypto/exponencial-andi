@@ -4,14 +4,13 @@ export default function Header() {
   return (
     <header className="nav-glass sticky top-0 z-30">
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px" }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 80 }}>
 
           {/* Logo imagen real */}
           <img
             src={`${base}logo-exponencial.png`}
             alt="Gobierno Corporativo Exponencial"
-            style={{ height: 68, width: "auto", objectFit: "contain" }}
-            className="logo-header"
+            style={{ height: 64, width: "auto", objectFit: "contain" }}
           />
 
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
