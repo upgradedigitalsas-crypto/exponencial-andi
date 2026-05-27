@@ -77,7 +77,7 @@ export default function AboutSection() {
           <img
             src={`${base}logo-exponencial.png`}
             alt="Exponencial"
-            style={{ height: 54, width: "auto", objectFit: "contain" }}
+            style={{ height: 90, width: "auto", objectFit: "contain" }}
           />
         </div>
 
