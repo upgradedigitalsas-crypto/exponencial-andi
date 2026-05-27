@@ -12,7 +12,7 @@ const CERT_PALETTE = {
   "Mentalidad de Crecimiento":   { bg: "#ffedd5", color: "#9a3412" },
 };
 
-const TIPOS = ["Proyecto", "Contratación", "Alianza estratégica", "Mentoría"];
+const TIPOS = ["Junta Directiva", "Junta Asesora", "Comité Consultor", "Proyecto especial"];
 
 function Avatar({ photo, name, onClick }) {
   const initials = name.split(" ").slice(0, 2).map((n) => n[0]).join("").toUpperCase();
@@ -109,10 +109,13 @@ function ContactForm({ profile, onBack, onSuccess }) {
       {/* Header */}
       <div style={{ paddingBottom: 14, borderBottom: "1px solid var(--border)" }}>
         <div style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text-primary)" }}>
-          Contactar a {profile.name.split(" ")[0]}
+          Consultar disponibilidad de {profile.name.split(" ")[0]}
         </div>
         <div style={{ fontSize: 12, color: "var(--text-tertiary)", marginTop: 2 }}>
           {profile.role} · {profile.company}
+        </div>
+        <div style={{ fontSize: 11, color: "var(--brand-purple)", fontWeight: 600, marginTop: 4 }}>
+          Talento certificado para Juntas Directivas y Asesoras
         </div>
       </div>
 
@@ -164,7 +167,7 @@ function ContactForm({ profile, onBack, onSuccess }) {
       {/* Mensaje */}
       <Field label="Mensaje *">
         <textarea value={form.mensaje} onChange={set("mensaje")} rows={4}
-          placeholder={`Hola ${profile.name.split(" ")[0]}, me gustaría explorar una posible colaboración...`}
+          placeholder={`Hola ${profile.name.split(" ")[0]}, queremos explorar tu vinculación a nuestra Junta...`}
           style={{ ...inputStyle, resize: "vertical", lineHeight: 1.6, borderColor: errors.mensaje ? "#ef4444" : "var(--border)" }}
           onFocus={(e) => { e.target.style.borderColor = "var(--brand-purple)"; e.target.style.boxShadow = "0 0 0 3px rgba(124,58,237,0.12)"; }}
           onBlur={(e)  => { e.target.style.borderColor = errors.mensaje ? "#ef4444" : "var(--border)"; e.target.style.boxShadow = "none"; }}
@@ -174,13 +177,14 @@ function ContactForm({ profile, onBack, onSuccess }) {
 
       <button type="submit" disabled={busy} style={{
         display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-        background: busy ? "var(--border)" : "var(--brand-purple)",
+        background: busy ? "var(--border)" : "linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)",
         color: busy ? "var(--text-tertiary)" : "#fff",
         fontSize: 14, fontWeight: 700, padding: "12px 20px", borderRadius: 12,
         border: "none", cursor: busy ? "not-allowed" : "pointer",
         fontFamily: "inherit", transition: "background 0.2s",
+        boxShadow: busy ? "none" : "0 4px 14px rgba(124,58,237,0.35)",
       }}>
-        {busy ? "Enviando..." : `Enviar solicitud de ${tipo}`}
+        {busy ? "Enviando..." : `Solicitar para ${tipo}`}
         {!busy && (
           <svg style={{ width: 14, height: 14 }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 12h14m-6-6l6 6-6 6" />
@@ -430,7 +434,7 @@ export default function ProfileModal({ profile, onClose }) {
                         marginLeft: "auto",
                       }}
                     >
-                      Solicitar proyecto
+                      Consultar para Junta
                       <svg style={{ width: 13, height: 13 }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 12h14m-6-6l6 6-6 6" />
                       </svg>

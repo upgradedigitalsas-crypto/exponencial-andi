@@ -106,9 +106,11 @@ export default function AboutSection() {
             color: "var(--text-secondary)",
             fontWeight: 400,
           }}>
-            Impulsado por <strong style={{ color: "var(--text-primary)" }}>ANDI Antioquia</strong> y certificado por el{" "}
-            <strong style={{ color: "var(--text-primary)" }}>CESA</strong>, Exponencial equipa a líderes empresariales
-            con las herramientas para transformar sus organizaciones y sus industrias.
+            Impulsado por <strong style={{ color: "var(--text-primary)" }}>ANDI Antioquia</strong>,{" "}
+            <strong style={{ color: "var(--text-primary)" }}>ANDI del Futuro</strong> y la{" "}
+            <strong style={{ color: "var(--text-primary)" }}>Cámara de Comercio de Medellín</strong>,
+            y certificado por el <strong style={{ color: "var(--text-primary)" }}>CESA</strong>,
+            Exponencial equipa a líderes empresariales con las herramientas para transformar sus organizaciones.
           </p>
         </div>
 
@@ -158,7 +160,7 @@ export default function AboutSection() {
               Directorio de Talento
             </h3>
             <p style={{ margin: 0, fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.75 }}>
-              Conecta con los {profiles.length} líderes certificados de la cohorte 2025.
+              Conecta con los {profiles.length} líderes certificados de la cohorte 2026.
               Un directorio diseñado para facilitar alianzas estratégicas, networking y colaboración
               entre empresas de alto impacto en Antioquia y Colombia.
             </p>

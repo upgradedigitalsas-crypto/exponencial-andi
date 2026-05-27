@@ -10,20 +10,20 @@ export default function Header() {
           <img
             src={`${base}logo-exponencial.png`}
             alt="Gobierno Corporativo Exponencial"
-            style={{ height: 60, width: "auto", objectFit: "contain" }}
+            style={{ height: 68, width: "auto", objectFit: "contain" }}
             className="logo-header"
           />
 
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <span style={{ fontSize: 12, color: "var(--text-tertiary)" }} className="hidden sm:block">
-              Directorio · ANDI Antioquia
+              Directorio · ANDI + CCMA
             </span>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 1 }}>
               <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--brand-purple)", lineHeight: 1 }}>
                 Cohorte
               </span>
               <span style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-0.04em", color: "var(--text-primary)", lineHeight: 1 }}>
-                2025
+                2026
               </span>
             </div>
           </div>

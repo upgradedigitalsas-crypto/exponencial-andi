@@ -141,9 +141,9 @@ export default function App() {
           </div>
 
           <div className="hero-t3" style={{ display: "flex", justifyContent: "center", gap: "clamp(24px, 5vw, 72px)", flexWrap: "wrap", alignItems: "center" }}>
-            <StatCard value={profiles.length} label="Perfiles" />
+            <StatCard value={profiles.length} label="Líderes" />
             <div style={{ width: 1, background: "rgba(255,255,255,0.07)", alignSelf: "stretch", minHeight: 40 }} />
-            <StatCard value="8" label="Certificaciones" />
+            <StatCard value="8" label="Módulos" />
             <div style={{ width: 1, background: "rgba(255,255,255,0.07)", alignSelf: "stretch", minHeight: 40 }} />
             <StatCard value="12" label="Sectores" />
             <div style={{ width: 1, background: "rgba(255,255,255,0.07)", alignSelf: "stretch", minHeight: 40 }} />

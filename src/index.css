@@ -106,7 +106,7 @@ body {
 
 /* Header logo responsive */
 .logo-header { height: 52px !important; }
-@media (min-width: 768px) { .logo-header { height: 60px !important; } }
+@media (min-width: 768px) { .logo-header { height: 68px !important; } }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
