@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { profiles } from "./data/profiles";
+import { profiles, COMMITTEES, SECTORS, COMPANY_TYPES } from "./data/profiles";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import FilterPanel from "./components/FilterPanel";
@@ -7,10 +7,7 @@ import ProfileCard from "./components/ProfileCard";
 import ProfileModal from "./components/ProfileModal";
 import AboutSection from "./components/AboutSection";
 
-const EMPTY_FILTERS = { certifications: [], sectors: [], roles: [] };
-const CERT_OPTS = ["Liderazgo Exponencial","Transformación Digital","Innovación y Tendencias","Gestión del Cambio","Sostenibilidad Empresarial","Estrategia y Competitividad","Comunicación Ejecutiva","Mentalidad de Crecimiento"];
-const SECTOR_OPTS = ["Tecnología","Consultoría","Manufactura","Energía","Logística","Marketing Digital","Legal","Retail / Moda","Gremio / Asociación","Biotecnología","Servicios Empresariales","Educación"];
-const ROLE_OPTS = ["Gerente General","Director Comercial","Director de Innovación","Gerente de Operaciones","Director de Transformación Digital","Líder de Proyectos","Gerente de Talento Humano","Director Financiero","Fundador / CEO","Gerente de Sostenibilidad"];
+const EMPTY_FILTERS = { committees: [], sectors: [], companyTypes: [] };
 
 /* Mobile filter drawer */
 function MobileFilters({ filters, onFilterChange, onClear, hasActive, open, onClose }) {
@@ -48,9 +45,9 @@ function MobileFilters({ filters, onFilterChange, onClear, hasActive, open, onCl
           </button>
         )}
         {[
-          { key: "certifications", label: "Certificaciones", opts: CERT_OPTS },
-          { key: "sectors", label: "Sector", opts: SECTOR_OPTS },
-          { key: "roles", label: "Rol", opts: ROLE_OPTS },
+          { key: "committees", label: "Comités de Junta", opts: COMMITTEES },
+          { key: "sectors", label: "Sector", opts: SECTORS },
+          { key: "companyTypes", label: "Tipo de Empresa", opts: COMPANY_TYPES },
         ].map(({ key, label, opts }) => (
           <div key={key} style={{ marginBottom: 24 }}>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 6, paddingLeft: 4 }}>
@@ -96,22 +93,29 @@ export default function App() {
   const [selected, setSelected] = useState(null);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  const hasActiveFilters = filters.certifications.length > 0 || filters.sectors.length > 0 || filters.roles.length > 0;
-  const totalActive = filters.certifications.length + filters.sectors.length + filters.roles.length;
+  const hasActiveFilters = filters.committees.length > 0 || filters.sectors.length > 0 || filters.companyTypes.length > 0;
+  const totalActive = filters.committees.length + filters.sectors.length + filters.companyTypes.length;
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
     return profiles.filter((p) => {
-      const matchesQuery = !q || [p.name, p.company, p.role, p.sector, ...p.skills].some(s => s.toLowerCase().includes(q));
-      const matchesCerts = !filters.certifications.length || filters.certifications.some(c => p.certifications.includes(c));
-      const matchesSectors = !filters.sectors.length || filters.sectors.includes(p.sector);
-      const matchesRoles = !filters.roles.length || filters.roles.includes(p.role);
-      return matchesQuery && matchesCerts && matchesSectors && matchesRoles;
+      const matchesQuery = !q || [p.name, p.company, p.role, p.sector, p.city, ...p.skills].some(s => s.toLowerCase().includes(q));
+      const matchesCommittees = !filters.committees.length || filters.committees.some(c => p.committees.includes(c));
+      const matchesSectors = !filters.sectors.length || filters.sectors.some(s => p.sectors.includes(s));
+      const matchesCompanyTypes = !filters.companyTypes.length || filters.companyTypes.includes(p.companyType);
+      return matchesQuery && matchesCommittees && matchesSectors && matchesCompanyTypes;
     });
   }, [query, filters]);
 
   const handleFilterChange = (key, values) => setFilters(prev => ({ ...prev, [key]: values }));
   const clearFilters = () => { setFilters(EMPTY_FILTERS); setQuery(""); };
+
+  // Pass filter constants down
+  const filterConfig = [
+    { key: "committees", label: "Comités de Junta", opts: COMMITTEES },
+    { key: "sectors", label: "Sector", opts: SECTORS },
+    { key: "companyTypes", label: "Tipo de Empresa", opts: COMPANY_TYPES },
+  ];
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
@@ -133,21 +137,21 @@ export default function App() {
           <div className="hero-t1" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 12, marginBottom: 52 }}>
             <h1 style={{ margin: 0, fontSize: "clamp(32px, 5vw, 60px)", fontWeight: 800, letterSpacing: "-0.04em", color: "#f5f5f7", lineHeight: 1.1 }}>
               Directorio de Talento<br />
-              <span style={{ color: "#a78bfa" }}>Exponencial</span>
+              <span style={{ color: "#a78bfa" }}>para Juntas Directivas</span>
             </h1>
-            <p className="hero-t2" style={{ margin: 0, fontSize: "clamp(14px, 2vw, 17px)", color: "rgba(255,255,255,0.45)", maxWidth: 480, lineHeight: 1.65, fontWeight: 400 }}>
-              Conecta con líderes certificados listos para impulsar la transformación de tu empresa.
+            <p className="hero-t2" style={{ margin: 0, fontSize: "clamp(14px, 2vw, 17px)", color: "rgba(255,255,255,0.45)", maxWidth: 520, lineHeight: 1.65, fontWeight: 400 }}>
+              Conecta con líderes listos para transformar el gobierno corporativo de tu empresa.
             </p>
           </div>
 
           <div className="hero-t3" style={{ display: "flex", justifyContent: "center", gap: "clamp(24px, 5vw, 72px)", flexWrap: "wrap", alignItems: "center" }}>
             <StatCard value={profiles.length} label="Líderes" />
             <div style={{ width: 1, background: "rgba(255,255,255,0.07)", alignSelf: "stretch", minHeight: 40 }} />
-            <StatCard value="8" label="Módulos" />
+            <StatCard value="9" label="Comités" />
             <div style={{ width: 1, background: "rgba(255,255,255,0.07)", alignSelf: "stretch", minHeight: 40 }} />
             <StatCard value="12" label="Sectores" />
             <div style={{ width: 1, background: "rgba(255,255,255,0.07)", alignSelf: "stretch", minHeight: 40 }} />
-            <StatCard value="10+" label="Roles" />
+            <StatCard value="47" label="Meta 2026" />
           </div>
         </div>
       </section>
@@ -200,7 +204,7 @@ export default function App() {
             {/* Active filter chips */}
             {hasActiveFilters && (
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>
-                {[...filters.certifications, ...filters.sectors, ...filters.roles].map((tag) => (
+                {[...filters.committees, ...filters.sectors, ...filters.companyTypes].map((tag) => (
                   <span key={tag} style={{
                     display: "inline-flex", alignItems: "center", gap: 5,
                     background: "var(--brand-purple)", color: "#fff",
@@ -208,7 +212,7 @@ export default function App() {
                   }}>
                     {tag}
                     <button onClick={() => {
-                      const key = filters.certifications.includes(tag) ? "certifications" : filters.sectors.includes(tag) ? "sectors" : "roles";
+                      const key = filters.committees.includes(tag) ? "committees" : filters.sectors.includes(tag) ? "sectors" : "companyTypes";
                       handleFilterChange(key, filters[key].filter(v => v !== tag));
                     }} style={{
                       background: "rgba(255,255,255,0.18)", border: "none", borderRadius: "50%",
@@ -299,14 +303,6 @@ export default function App() {
                 <span style={{ fontSize: 8, fontWeight: 900, color: "#fff", letterSpacing: "0.02em", textAlign: "center", lineHeight: 1.2 }}>CCM</span>
               </div>
               <span style={{ fontSize: 10, fontWeight: 600, color: "var(--text-secondary)", textAlign: "center", maxWidth: 80, lineHeight: 1.3 }}>Cámara de Comercio</span>
-            </div>
-            <div style={{ width: 1, height: 40, background: "var(--border)" }} />
-            {/* CESA */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, opacity: 0.75 }}>
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#6d28d9", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 10, fontWeight: 900, color: "#fff", letterSpacing: "0.04em" }}>CESA</span>
-              </div>
-              <span style={{ fontSize: 10, fontWeight: 600, color: "var(--text-secondary)", textAlign: "center", maxWidth: 80, lineHeight: 1.3 }}>CESA · Sello de Calidad</span>
             </div>
           </div>
         </div>

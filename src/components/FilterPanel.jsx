@@ -1,4 +1,4 @@
-import { CERTIFICATIONS, SECTORS, ROLES } from "../data/profiles";
+import { COMMITTEES, SECTORS, COMPANY_TYPES } from "../data/profiles";
 
 function FilterGroup({ title, options, selected, onToggle }) {
   return (
@@ -39,14 +39,14 @@ export default function FilterPanel({ filters, onFilterChange, onClear, hasActiv
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16, padding: "0 4px" }}>
           <span style={{ fontSize: 13, fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.01em" }}>Filtros</span>
           {hasActiveFilters && (
-            <button onClick={onClear} style={{ fontSize: 11, color: "var(--andi-gold)", fontWeight: 600, background: "none", border: "none", cursor: "pointer", fontFamily: "inherit" }}>
+            <button onClick={onClear} style={{ fontSize: 11, color: "var(--brand-purple)", fontWeight: 600, background: "none", border: "none", cursor: "pointer", fontFamily: "inherit" }}>
               Limpiar
             </button>
           )}
         </div>
-        <FilterGroup title="Certificaciones" options={CERTIFICATIONS} selected={filters.certifications} onToggle={(v) => toggle("certifications", v)} />
+        <FilterGroup title="Comités de Junta" options={COMMITTEES} selected={filters.committees} onToggle={(v) => toggle("committees", v)} />
         <FilterGroup title="Sector" options={SECTORS} selected={filters.sectors} onToggle={(v) => toggle("sectors", v)} />
-        <FilterGroup title="Rol" options={ROLES} selected={filters.roles} onToggle={(v) => toggle("roles", v)} />
+        <FilterGroup title="Tipo de Empresa" options={COMPANY_TYPES} selected={filters.companyTypes} onToggle={(v) => toggle("companyTypes", v)} />
       </div>
     </aside>
   );

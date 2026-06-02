@@ -91,8 +91,8 @@ export default function AboutSection() {
             lineHeight: 1.2,
             color: "var(--text-primary)",
           }}>
-            Formación en liderazgo y gobierno corporativo<br className="hidden sm:block" />
-            {" "}para empresas de alto crecimiento.
+            Talento especializado en gobierno corporativo<br className="hidden sm:block" />
+            {" "}para fortalecer tus juntas directivas.
           </p>
         </div>
 
@@ -157,12 +157,12 @@ export default function AboutSection() {
           <div ref={refLeft}>
             <div style={{ width: 32, height: 3, background: "var(--brand-purple)", borderRadius: 2, marginBottom: 20 }} />
             <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 800, letterSpacing: "-0.025em", color: "var(--text-primary)" }}>
-              Directorio de Talento
+              Directorio para Juntas
             </h3>
             <p style={{ margin: 0, fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.75 }}>
-              Conecta con los {profiles.length} líderes certificados de la cohorte 2026.
-              Un directorio diseñado para facilitar alianzas estratégicas, networking y colaboración
-              entre empresas de alto impacto en Antioquia y Colombia.
+              Accede a los {profiles.length} líderes disponibles en la Cohorte 2026, seleccionados
+              por su experiencia en juntas directivas, gobierno corporativo y capacidad de generar
+              valor estratégico en empresas de alto crecimiento.
             </p>
           </div>
 

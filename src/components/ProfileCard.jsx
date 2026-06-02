@@ -1,12 +1,13 @@
 const CERT_PALETTE = {
-  "Liderazgo Exponencial":       { bg: "#ede9fe", color: "#5b21b6" },
-  "Transformación Digital":      { bg: "#e0e7ff", color: "#3730a3" },
-  "Innovación y Tendencias":     { bg: "#fef3c7", color: "#92400e" },
-  "Gestión del Cambio":          { bg: "#d1fae5", color: "#065f46" },
-  "Sostenibilidad Empresarial":  { bg: "#dcfce7", color: "#166534" },
-  "Estrategia y Competitividad": { bg: "#f3e8ff", color: "#6d28d9" },
-  "Comunicación Ejecutiva":      { bg: "#fce7f3", color: "#9d174d" },
-  "Mentalidad de Crecimiento":   { bg: "#ffedd5", color: "#9a3412" },
+  "Estrategia e innovación":         { bg: "#ede9fe", color: "#5b21b6" },
+  "Transformación digital":          { bg: "#e0e7ff", color: "#3730a3" },
+  "Auditoría y riesgo":              { bg: "#fef3c7", color: "#92400e" },
+  "Sostenibilidad y ASG":            { bg: "#d1fae5", color: "#065f46" },
+  "Compensación y talento":          { bg: "#fce7f3", color: "#9d174d" },
+  "Legal":                           { bg: "#f0fdf4", color: "#166534" },
+  "Nuevos negocios":                 { bg: "#ffedd5", color: "#9a3412" },
+  "Procesos":                        { bg: "#f3e8ff", color: "#6d28d9" },
+  "Inclusión, diversidad y equidad": { bg: "#fdf2f8", color: "#701a75" },
 };
 
 function Avatar({ photo, name }) {
@@ -34,7 +35,7 @@ function Avatar({ photo, name }) {
         display: "none", width: 52, height: 52, borderRadius: 14, position: "absolute", inset: 0,
         background: "linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)",
         alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 17, fontWeight: 700,
-      }}>{initials}</div>
+      }}>{name.split(" ").slice(0, 2).map((n) => n[0]).join("").toUpperCase()}</div>
     </div>
   );
 }
@@ -58,7 +59,7 @@ export default function ProfileCard({ profile, onClick, index = 0 }) {
             {profile.role}
           </div>
           <div style={{ fontSize: 11, color: "var(--text-tertiary)", marginTop: 2, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-            {profile.company} · {profile.sector}
+            {profile.company} · {profile.city}
           </div>
         </div>
       </div>
@@ -71,39 +72,40 @@ export default function ProfileCard({ profile, onClick, index = 0 }) {
         {profile.bio}
       </p>
 
-      {/* Certs */}
+      {/* Committees */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
-        {profile.certifications.slice(0, 2).map((cert) => {
-          const p = CERT_PALETTE[cert] || { bg: "#f3f4f6", color: "#374151" };
+        {profile.committees.slice(0, 2).map((c) => {
+          const p = CERT_PALETTE[c] || { bg: "#f3f4f6", color: "#374151" };
           return (
-            <span key={cert} style={{
+            <span key={c} style={{
               fontSize: 10, fontWeight: 600, padding: "3px 9px", borderRadius: 100,
               background: p.bg, color: p.color,
             }}>
-              {cert}
+              {c}
             </span>
           );
         })}
-        {profile.certifications.length > 2 && (
+        {profile.committees.length > 2 && (
           <span style={{
             fontSize: 10, fontWeight: 600, padding: "3px 9px", borderRadius: 100,
             background: "var(--bg)", color: "var(--text-tertiary)", border: "1px solid var(--border)",
           }}>
-            +{profile.certifications.length - 2}
+            +{profile.committees.length - 2}
           </span>
         )}
       </div>
 
-      {/* Skills */}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 4, borderTop: "1px solid var(--border)", paddingTop: 10 }}>
+      {/* Skills + availability */}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 4, borderTop: "1px solid var(--border)", paddingTop: 10, alignItems: "center" }}>
         {profile.skills.slice(0, 3).map((skill) => (
           <span key={skill} style={{
             fontSize: 11, color: "var(--text-secondary)",
             background: "var(--bg)", padding: "3px 9px", borderRadius: 100,
-          }}>
-            {skill}
-          </span>
+          }}>{skill}</span>
         ))}
+        <span style={{ marginLeft: "auto", fontSize: 10, fontWeight: 600, color: "var(--text-tertiary)", whiteSpace: "nowrap" }}>
+          ⏱ {profile.availability}
+        </span>
       </div>
     </article>
   );

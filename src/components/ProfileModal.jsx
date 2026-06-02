@@ -2,14 +2,15 @@ import { useEffect, useState } from "react";
 const base = import.meta.env.BASE_URL;
 
 const CERT_PALETTE = {
-  "Liderazgo Exponencial":       { bg: "#ede9fe", color: "#5b21b6" },
-  "Transformación Digital":      { bg: "#e0e7ff", color: "#3730a3" },
-  "Innovación y Tendencias":     { bg: "#fef3c7", color: "#92400e" },
-  "Gestión del Cambio":          { bg: "#d1fae5", color: "#065f46" },
-  "Sostenibilidad Empresarial":  { bg: "#dcfce7", color: "#166534" },
-  "Estrategia y Competitividad": { bg: "#f3e8ff", color: "#6d28d9" },
-  "Comunicación Ejecutiva":      { bg: "#fce7f3", color: "#9d174d" },
-  "Mentalidad de Crecimiento":   { bg: "#ffedd5", color: "#9a3412" },
+  "Estrategia e innovación":         { bg: "#ede9fe", color: "#5b21b6" },
+  "Transformación digital":          { bg: "#e0e7ff", color: "#3730a3" },
+  "Auditoría y riesgo":              { bg: "#fef3c7", color: "#92400e" },
+  "Sostenibilidad y ASG":            { bg: "#d1fae5", color: "#065f46" },
+  "Compensación y talento":          { bg: "#fce7f3", color: "#9d174d" },
+  "Legal":                           { bg: "#f0fdf4", color: "#166534" },
+  "Nuevos negocios":                 { bg: "#ffedd5", color: "#9a3412" },
+  "Procesos":                        { bg: "#f3e8ff", color: "#6d28d9" },
+  "Inclusión, diversidad y equidad": { bg: "#fdf2f8", color: "#701a75" },
 };
 
 const TIPOS = ["Junta Directiva", "Junta Asesora", "Comité Consultor", "Proyecto especial"];
@@ -337,38 +338,63 @@ export default function ProfileModal({ profile, onClose }) {
                     <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4, flexWrap: "wrap" }}>
                       <span style={{ fontSize: 12, color: "var(--text-secondary)" }}>{profile.company}</span>
                       <span style={{ color: "var(--border)" }}>·</span>
-                      <span style={{ fontSize: 12, color: "var(--text-tertiary)" }}>{profile.sector}</span>
+                      <span style={{ fontSize: 12, color: "var(--text-tertiary)" }}>{profile.city}</span>
                     </div>
                   </div>
                   <img
                     src={`${base}logo-exponencial.png`}
-                    alt="Exponencial"
+                    alt="ADF"
                     style={{ height: 36, width: "auto", objectFit: "contain", flexShrink: 0 }}
                   />
+                </div>
+
+                {/* Badges: disponibilidad + expansión + capital */}
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>
+                  <span style={{ fontSize: 11, fontWeight: 600, padding: "4px 10px", borderRadius: 100, background: "var(--brand-purple-light)", color: "var(--brand-purple)", border: "1px solid rgba(124,58,237,0.2)" }}>
+                    ⏱ {profile.availability} / mes
+                  </span>
+                  {profile.ledExpansion && (
+                    <span style={{ fontSize: 11, fontWeight: 600, padding: "4px 10px", borderRadius: 100, background: "#f0fdf4", color: "#166534" }}>
+                      ✓ Lideró expansión
+                    </span>
+                  )}
+                  {profile.ledCapital && (
+                    <span style={{ fontSize: 11, fontWeight: 600, padding: "4px 10px", borderRadius: 100, background: "#eff6ff", color: "#1d4ed8" }}>
+                      ✓ Levantamiento de capital
+                    </span>
+                  )}
                 </div>
 
                 <div style={{ height: 1, background: "var(--border)", marginBottom: 18 }} />
 
                 {/* Bio */}
                 <div style={{ marginBottom: 20 }}>
-                  <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 8 }}>Acerca de</div>
+                  <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 8 }}>Perfil</div>
                   <p style={{ margin: 0, fontSize: 13, lineHeight: 1.7, color: "var(--text-secondary)" }}>{profile.bio}</p>
                 </div>
 
-                {/* Certifications */}
+                {/* Board experience */}
+                {profile.boardExperience && (
+                  <div style={{ marginBottom: 20 }}>
+                    <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 8 }}>Experiencia en Juntas</div>
+                    <p style={{ margin: 0, fontSize: 13, lineHeight: 1.7, color: "var(--text-secondary)" }}>{profile.boardExperience}</p>
+                  </div>
+                )}
+
+                {/* Committees */}
                 <div style={{ marginBottom: 20 }}>
                   <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 10 }}>
-                    Certificaciones del Programa
+                    Comités de Junta
                   </div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                    {profile.certifications.map((cert) => {
-                      const p = CERT_PALETTE[cert] || { bg: "#f3f4f6", color: "#374151" };
+                    {profile.committees.map((c) => {
+                      const p = CERT_PALETTE[c] || { bg: "#f3f4f6", color: "#374151" };
                       return (
-                        <span key={cert} style={{
+                        <span key={c} style={{
                           fontSize: 11, fontWeight: 600, padding: "5px 12px", borderRadius: 100,
                           background: p.bg, color: p.color,
                         }}>
-                          ✓ {cert}
+                          ✓ {c}
                         </span>
                       );
                     })}
@@ -378,7 +404,7 @@ export default function ProfileModal({ profile, onClose }) {
                 {/* Skills */}
                 <div style={{ marginBottom: 20 }}>
                   <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 10 }}>
-                    Habilidades Clave
+                    Áreas de Valor
                   </div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                     {profile.skills.map((skill) => (
@@ -390,6 +416,14 @@ export default function ProfileModal({ profile, onClose }) {
                     ))}
                   </div>
                 </div>
+
+                {/* Unique perspective */}
+                {profile.uniquePerspective && (
+                  <div style={{ marginBottom: 20, padding: "14px 16px", background: "var(--brand-purple-xlight)", borderRadius: 12, border: "1px solid rgba(124,58,237,0.1)" }}>
+                    <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--brand-purple)", marginBottom: 6 }}>Perspectiva Única</div>
+                    <p style={{ margin: 0, fontSize: 12, lineHeight: 1.7, color: "var(--text-secondary)" }}>{profile.uniquePerspective}</p>
+                  </div>
+                )}
 
                 {/* Contact + CTA */}
                 <div style={{ borderTop: "1px solid var(--border)", paddingTop: 18 }}>
