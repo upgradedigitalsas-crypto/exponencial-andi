@@ -59,6 +59,9 @@ export const profiles = [
     internationalMarkets: ["América Latina"],
     uniquePerspective: "Visión de crecimiento sin capital externo —bootstrapping— hasta venta final. Diferenciación tecnológica con el comportamiento humano como eje central.",
     nonNegotiables: "Compañías con flexibilidad y voluntad real de transformar usando tecnología.",
+    education: [{"degree": "Estrategias de IA para la transformación empresarial en Artificial Intelligenc", "school": "Kellogg Executive Education", "period": "Jan 2026 - Apr 2026"}, {"degree": "Curso de Gobierno Corporativo", "school": "CESA", "period": "Jan 2026 - Jun 2026"}, {"degree": "Alta dirección estrategia en Business Administration and Management", "school": "INALDE Business School", "period": "Sep 2023 - Dec 2023"}, {"degree": "Master Business Administration (MBA) en Administracion de negocios", "school": "Universidad EAFIT", "period": "2015 - 2017"}, {"degree": "Ingeniero Electrónico en Sistemas Digitales", "school": "Universidad de Antioquia", "period": "2005 - 2011"}, {"degree": "Negocios en Negociació", "school": "Diplomado en Negociación de Tecnología", "period": "2014 - 2014"}],
+    linkedinCerts: [],
+    experience: [{"position": "Director de Nuevos Negocios e Innovación", "company": "Tekus | Comunicación Digital", "period": "2026 – Presente", "duration": "2 mos"}, {"position": "Chief Executive Officer", "company": "Tekus | Comunicación Digital", "period": "2013 – May 2026", "duration": "13 yrs 4 mos"}, {"position": "Member Board of Directors", "company": "Factor Dinero S.A.", "period": "2022 – Presente", "duration": "4 yrs 6 mos"}, {"position": "Member Board Of Directors", "company": "TDM", "period": "2019 – Presente", "duration": "7 yrs 4 mos"}, {"position": "Member Board of Directors", "company": "Alimentos Nebraska", "period": "2017 – Presente", "duration": "9 yrs 6 mos"}],
   },
   {
     id: 2,
@@ -83,6 +86,9 @@ export const profiles = [
     internationalMarkets: ["América Latina", "EEUU"],
     uniquePerspective: "Visión holística de co-founder con 16 años liderando innovación, aplicando estándares aeronáuticos a la logística terrestre.",
     nonNegotiables: "Integridad y seguridad integral. No colabora con organizaciones reacias a la transformación tecnológica.",
+    education: [{"degree": "Diplomado en gestión de proyectos de ingeniería", "school": "Universidad Pontificia Bolivariana", "period": "Jul 2009 - Nov 2009"}, {"degree": "Desarrollo web y movil con HTML5 en CSS3 y JQuery", "school": "Cymetria group SA y Mac power SA", "period": "Jan 2013 - Apr 2013"}, {"degree": "Ingeniero Aeronáutico en Ingeniería aeroespacial", "school": "Universidad Pontificia Bolivariana", "period": "2004 - 2009"}],
+    linkedinCerts: [],
+    experience: [{"position": "CEO / Co Founder", "company": "TM Solutions S.A.S.", "period": "2009 – Presente", "duration": "16 yrs 10 mos"}, {"position": "CEO / Co Founder", "company": "TM Solutions S.A.S.", "period": "2009 – Presente", "duration": "16 yrs 10 mos"}],
   },
   {
     id: 3,
@@ -107,6 +113,9 @@ export const profiles = [
     internationalMarkets: ["Solo Colombia"],
     uniquePerspective: "Visión estratégica construida desde el acompañamiento real a empresarios en crecimiento. Conoce los desafíos de las pymes desde adentro.",
     nonNegotiables: "Organizaciones abiertas al aprendizaje y reconocer lo que necesitan fortalecer.",
+    education: [{"degree": "Especialista en Finanzas en Finanzas corporativas", "school": "Universidad Escuela de Administración y Finanzas y Tecnologías", "period": ""}, {"degree": "Ingeniero de Productividad y Calidad en Gestión de productividad y calidad", "school": "Politécnico Colombiano 'Jaime Isaza Cadavid'", "period": ""}],
+    linkedinCerts: [],
+    experience: [{"position": "CEO y Socio fundador", "company": "EnActivo Consulting", "period": "2018 – Presente", "duration": "7 yrs 7 mos"}, {"position": "Director y Consultor Senior", "company": "EnActivo Consulting", "period": "2019 – Nov 2022", "duration": "3 yrs 11 mos"}, {"position": "Director y Consultor Senior", "company": "EnActivo Consulting", "period": "2019 – Nov 2022", "duration": "3 yrs 11 mos"}, {"position": "Consultor Asociado", "company": "Enlace Consultores en Gestion Empresarial Ltda.", "period": "2008 – Nov 2022", "duration": "14 yrs 1 mo"}, {"position": "Consultor", "company": "Administración con Sentido Común", "period": "2003 – Nov 2022", "duration": "19 yrs 11 mos"}],
   },
   {
     id: 4,
@@ -131,6 +140,9 @@ export const profiles = [
     internationalMarkets: ["América Latina"],
     uniquePerspective: "Mirada flexible, disruptiva y orientada a la cocreación para identificar oportunidades emergentes e impulsar transformaciones culturales ágiles.",
     nonNegotiables: "Empresas con propósito y apertura a la innovación y la diversidad de pensamiento.",
+    education: [{"degree": "Especialista en Gerencia de Mercados Globales", "school": "Universidad EIA - Escuela de Ingeniería de Antioquia", "period": ""}, {"degree": "Ingeniera Electricista", "school": "Universidad Pontificia Bolivariana", "period": ""}],
+    linkedinCerts: [],
+    experience: [{"position": "Gerente General", "company": "Kinnesis Solutions S.A.S", "period": "2012 – Presente", "duration": "14 yrs 5 mos"}, {"position": "Co-Founder & CEO", "company": "Kinnesis Solutions S.A.S", "period": "2012 – Presente", "duration": "14 yrs 5 mos"}],
   },
   {
     id: 5,
@@ -155,6 +167,9 @@ export const profiles = [
     internationalMarkets: ["América Latina", "EEUU"],
     uniquePerspective: "14 años de emprendimiento con participación simultánea en múltiples juntas en sectores de energía y tech.",
     nonNegotiables: "Solo trabaja en compañías alineadas con su propósito.",
+    education: [{"degree": "Ingeniero Mecánico en Mechanical Engineering", "school": "Universidad EAFIT", "period": "2007 - 2012"}, {"degree": "Especialización en Mercados de Energía", "school": "Universidad Nacional de Colombia", "period": "2017 - 2017"}, {"degree": "Master of Engineering - MEng en Energy Management and Systems Technology/Technicia", "school": "Universidad Nacional de Colombia", "period": "2018 - 2019"}, {"degree": "Bootcamp Venture Scaling en Estrategia", "school": "Massachusetts Institute of Technology", "period": "2019 - 2019"}, {"degree": "PADE en Business Administration and Management", "school": "INALDE Business School", "period": "May 2023 - Nov 2023"}, {"degree": "ECLA en Entrepreneurship", "school": "Columbia Business School", "period": "Jan 2025 - Jan 2026"}, {"degree": "Gobierno Corporativo en Corporate governanc", "school": "CESA", "period": "Feb 2026 - Mar 2026"}],
+    linkedinCerts: [],
+    experience: [{"position": "Board Member", "company": "Créame Incubadora de Empresas", "period": "2025 – Presente", "duration": "1 yr 4 mos"}, {"position": "Endeavor Entrepreneur", "company": "Endeavor", "period": "2025 – Presente", "duration": "1 yr 6 mos"}, {"position": "Member of the Board of Advisors", "company": "Lup", "period": "2024 – Presente", "duration": "1 yr 9 mos"}, {"position": "Miembro de la junta", "company": "Un Hobby Par Dar", "period": "2025 – Presente", "duration": "1 yr 6 mos"}, {"position": "Board Member", "company": "Erco Energy", "period": "2021 – Presente", "duration": "5 yrs 6 mos"}],
   },
   {
     id: 6,
@@ -179,6 +194,9 @@ export const profiles = [
     internationalMarkets: ["Solo Colombia"],
     uniquePerspective: "Estrategias de mercadeo digital para crecimiento de startup con impacto social.",
     nonNegotiables: "",
+    education: [{"degree": "Master en Innovacion", "school": "EIG Education", "period": "2020 - 2021"}, {"degree": "Especializacion en gerencia integral", "school": "Fundación Universitaria CEIPA", "period": "2020 - 2021"}, {"degree": "Contaduria Publica en Contabilidad", "school": "Corporacion Universitaria de Colombia IDEAS", "period": "2008 - 2013"}, {"degree": "Tecnología en dirección de ventas", "school": "Servicio Nacional de Aprendizaje (SENA)", "period": "2008 - 2010"}],
+    linkedinCerts: [],
+    experience: [{"position": "Directora comercial-Creadora de GPE", "company": "Grupo Proyección Empresarial", "period": "2020 – Presente", "duration": "6 yrs 6 mos"}, {"position": "Directora administrativa", "company": "PCE Asociados", "period": "2021 – Presente", "duration": "5 yrs 6 mos"}, {"position": "Gerente general", "company": "Proyección Contable & Empresarial", "period": "2019 – Presente", "duration": "7 yrs 6 mos"}, {"position": "Directora Adminsitrativa", "company": "Proyección Contable & Empresarial", "period": "2017 – Jan 2019", "duration": "2 yrs 1 mo"}, {"position": "Auxiliar administrativa", "company": "Vision Segura y cia Ltda", "period": "2010 – Jan 2017", "duration": "6 yrs 10 mos"}],
   },
   {
     id: 7,
@@ -203,6 +221,9 @@ export const profiles = [
     internationalMarkets: ["América Latina", "EEUU"],
     uniquePerspective: "Resiliencia de emprendedor que ha navegado crisis reales y dinámicas societarias complejas. Combina visión ágil de Venture Studio con metodologías corporativas.",
     nonNegotiables: "Transparencia y relaciones gana-gana. No trabaja con organizaciones que no toleren el error como aprendizaje.",
+    education: [{"degree": "Master's degree en Digital Business", "school": "ESIC Business & Marketing School", "period": "May 2023 - Jun 2024"}, {"degree": "BACHELOR IN MECHANICAL ENGINEER", "school": "Universidad EAFIT", "period": "1996 - 2003"}, {"degree": "STRATEGIC NEGOTIATION DIPLOMA COURSE en ADMINISTRATION", "school": "Universidad EAFIT", "period": "2014 - 2014"}, {"degree": "GERENCIA COMERCIAL en Administración y gestión de empresas", "school": "Politécnico Superior de Colombia", "period": "2019 - 2019"}, {"degree": "Six Sigma Yellow Belt en Empresa", "school": "University Systems of Georgia", "period": "2020 - 2020"}, {"degree": "BRAND MANAGEMENT MOOC", "school": "LONDON SCHOOL", "period": "2018 - 2018"}, {"degree": "BUSINESS ENGLISH; MANAGEMENT AND LEADERSHIP", "school": "W. P. Carey School of Business – Arizona State University", "period": "2020 - 2020"}, {"degree": "E-COMMERCE DIPLOMA", "school": "Politécnico Superior de Colombia", "period": "2020 - 2020"}, {"degree": "C PROGRAMMING en COURSE", "school": "edX", "period": "2020 - 2020"}],
+    linkedinCerts: [],
+    experience: [{"position": "Chief Commercial Officer (CCO)", "company": "IDP", "period": "2023 – Presente", "duration": "2 yrs 8 mos"}, {"position": "Director Comercial", "company": "Estratek Ventures", "period": "2021 – Aug 2023", "duration": "2 yrs 7 mos"}, {"position": "Representante comercial Colombia", "company": "Rhino Linings", "period": "2020 – Feb 2021", "duration": "5 mos"}, {"position": "MANAGER", "company": "ECOAREA INDUSTRIALES S.A.S.", "period": "2010 – Sep 2020", "duration": "10 yrs 9 mos"}, {"position": "MANAGER", "company": "AQUA FIBRA TANK S.A.S.", "period": "2008 – Jan 2010", "duration": "2 yrs 1 mo"}],
   },
   {
     id: 8,
@@ -227,6 +248,9 @@ export const profiles = [
     internationalMarkets: ["América Latina", "África"],
     uniquePerspective: "Conecta sostenibilidad, impacto social y estrategia desde experiencia en territorios. Construye puentes entre empresas, sector público y organizaciones sociales.",
     nonNegotiables: "Modelos de negocio con valor económico, social y ambiental coherente.",
+    education: [{"degree": "Programa Nacional de Carbono Neutralidad en Estudios de sostenibilidad", "school": "Ministerio de Medio Ambiente Colombia", "period": "Mar 2022 - Jul 2022"}, {"degree": "Diplomado Sostenibilidad en Estudios de sostenibilidad", "school": "Universidad Pontificia Bolivariana", "period": "Jul 2021 - Nov 2021"}, {"degree": "Gerencia de sostenibilidad en Estudios de sostenibilidad", "school": "Instituto Centroamericano de Administración de Empresas", "period": ""}, {"degree": "Ingeniera electronica", "school": "Universidad Pontificia Bolivariana", "period": ""}],
+    linkedinCerts: [],
+    experience: [{"position": "Principal CEO", "company": "Indeleble social", "period": "2021 – Presente", "duration": "5 yrs 1 mo"}, {"position": "Directora General", "company": "Fundación Sueños por Colombia", "period": "2017 – May 2021", "duration": "3 yrs 8 mos"}, {"position": "Coordinadora de Movilización", "company": "Todos Por La Educación", "period": "2014 – Oct 2017", "duration": "3 yrs 9 mos"}, {"position": "CEO", "company": "In-deleble", "period": "2013 – Nov 2014", "duration": "1 yr"}, {"position": "Directora Soñar Despierto", "company": "Red Misión Internacional", "period": "2010 – Feb 2013", "duration": "3 yrs 2 mos"}],
   },
   {
     id: 9,
@@ -251,6 +275,9 @@ export const profiles = [
     internationalMarkets: ["América Latina"],
     uniquePerspective: "Rigurosidad legal multi-área con enfoque en innovación y tecnología. Une perspectiva jurídica con estrategia empresarial.",
     nonNegotiables: "",
+    education: [{"degree": "Postgraduate degree in Tax Law", "school": "Universidad del Rosario", "period": ""}, {"degree": "Postgraduate degree in Commercial Law", "school": "Pontificia Universidad Javeriana", "period": ""}, {"degree": "Master of Business Administration - MBA en Administración y gestión de empresas, general", "school": "ENEB - Escuela de Negocios Europea de Barcelona", "period": ""}, {"degree": "Bachelor of Laws - LLB", "school": "Universidad del Rosario", "period": ""}],
+    linkedinCerts: [],
+    experience: [{"position": "Founder & CEO", "company": "Due Legal", "period": "2020 – Presente", "duration": "6 yrs 5 mos"}, {"position": "Mentor", "company": "Founder Institute", "period": "2024 – Presente", "duration": "2 yrs 1 mo"}, {"position": "Investor", "company": "Grupo AV", "period": "2022 – Presente", "duration": "3 yrs 8 mos"}, {"position": "Teacher Legal Hermeneutics", "company": "Uniremington", "period": "2022 – Presente", "duration": "3 yrs 9 mos"}, {"position": "Teacher International Taxation", "company": "Uniremington", "period": "2022 – Oct 2022", "duration": "8 mos"}],
   },
   {
     id: 10,
@@ -275,6 +302,9 @@ export const profiles = [
     internationalMarkets: ["Solo Colombia"],
     uniquePerspective: "Visión profundamente humana del liderazgo desde la transformación cultural y el bienestar. Moviliza conversaciones y articula equipos hacia objetivos comunes.",
     nonNegotiables: "Organizaciones donde el bienestar de las personas sea un eje estratégico real.",
+    education: [{"degree": "Psicologa en Organizacional", "school": "Universidad Pontificia Bolivariana", "period": "1999 - 2004"}, {"degree": "máster en organizaciones saludables  e innovación en la gestión de personas en gestión humana / seguridad y salud en el trabajo", "school": "Florida Universitaria", "period": "2016 - 2017"}, {"degree": "Especialista en gerencia", "school": "Universidad Pontificia Bolivariana", "period": "2005 - 2007"}, {"degree": "Especialista en Salud Ocupacional en seguridad y salud en  trabajo", "school": "Fundación Universitaria María Caño", "period": "2010 - 2012"}, {"degree": "Diplomado en comportamiento organizacional en Psicología", "school": "Universidad Pontificia Bolivariana", "period": "2004 - 2004"}, {"degree": "Diplomatura en Metodologías agiles e innovación en la organizació", "school": "Universidad de La Sabana", "period": "Sep 2021 - Feb 2022"}, {"degree": "Gobierno Corporativo en Administración y gestión de empresas, general", "school": "CESA", "period": "Aug 2024 - Aug 2024"}, {"degree": "Sostenibilidad empresarial", "school": "Universidad De Los Andes Facultad de Administracion", "period": "Jul 2024 - Aug 2024"}],
+    linkedinCerts: [],
+    experience: [{"position": "Gerente", "company": "RH+ Recurso Humano Positivo", "period": "2016 – Presente", "duration": "9 yrs 9 mos"}, {"position": "Gerente comercial", "company": "RH+ Recurso Humano Positivo", "period": "2005 – Oct 2016", "duration": "11 yrs 5 mos"}],
   },
   {
     id: 11,
@@ -299,6 +329,9 @@ export const profiles = [
     internationalMarkets: ["América Latina"],
     uniquePerspective: "Conecta la estrategia del negocio con la capacidad humana para hacerla realidad. Lee la cultura organizacional y diseña estrategias para movilizar equipos.",
     nonNegotiables: "Respeto como principio rector. No en empresas con prácticas normalizadas de irrespeto.",
+    education: [{"degree": "Psicóloga en Especialista en Gerencia del talento humano", "school": "Universidad Pontificia Bolivariana", "period": "Jan 2011 - Dec 2011"}, {"degree": "Profesional en Psicología en Psychology", "school": "Universidad Pontificia Bolivariana", "period": "Jan 2004 - Dec 2008"}],
+    linkedinCerts: [],
+    experience: [{"position": "Presidente de Junta Directiva", "company": "ANDI del Futuro", "period": "2024 – Presente", "duration": "1 yr 9 mos"}, {"position": "Miembro de Junta Directiva", "company": "ANDI del Futuro", "period": "2023 – Sep 2025", "duration": "2 yrs 1 mo"}, {"position": "Gerente y Fundadora", "company": "GENTE OK", "period": "2009 – Presente", "duration": "17 yrs 6 mos"}, {"position": "Docente de Módulo de compensacion de fuerza de ventas", "company": "Universidad EAFIT", "period": "2010 – Oct 2018", "duration": "8 yrs 3 mos"}, {"position": "Docente de módulo de selección de fuerza de ventas", "company": "Universidad EAFIT", "period": "2010 – Oct 2018", "duration": "8 yrs 3 mos"}],
   },
   {
     id: 12,
@@ -323,6 +356,9 @@ export const profiles = [
     internationalMarkets: ["América Latina", "EEUU", "Europa"],
     uniquePerspective: "Construyó empresa desde cero combinando ciencia, innovación y estrategia. Conecta visión de largo plazo con realidad operativa. Mirada de futuro en IA y sostenibilidad.",
     nonNegotiables: "Organizaciones con propósito, visión de largo plazo y compromiso con la innovación y la ética.",
+    education: [{"degree": "Ingeniera Química en Ingeniería", "school": "Universidad Nacional de Colombia", "period": "Jan 2004 - Jun 2009"}, {"degree": "Máster en Gestión y Desarrollo de la Industria Alimentaria en Agroalimentario", "school": "Universidad de Oviedo", "period": "2011 - 2012"}, {"degree": "Magíster en Ciencia y tecnología de Alimentos", "school": "Universidad Nacional de Colombia", "period": "2009 - 2010"}, {"degree": "CAMPUS BT en Gestión de Proyectos de Base tecnológica", "school": "Escuela de Ingeniería de Antioquia", "period": "2013 - 2013"}, {"degree": "Máster Oenologie en Enología", "school": "Universitat Rovira i Virgili", "period": "2011 - 2012"}, {"degree": "specialidad en Ciencia y tecnolog&#xed;a de alimentos", "school": "Universidad Nacional de La Plata", "period": "2010 - 2010"}, {"degree": "Ingeniera Química en Quimica", "school": "Universidad Nacional de Colombia", "period": "2004 - 2009"}, {"degree": "Gerentes 4.0 en Administración y gestión de empresas", "school": "Universidad de Los Andes", "period": "2020 - 2020"}, {"degree": "Máster en Gestión y desarrollo de la Industria en Administración y gestión de empresas", "school": "Universidad de Oviedo", "period": "Aug 2010 - Dec 2012"}],
+    linkedinCerts: [],
+    experience: [{"position": "General manager", "company": "AOXLAB S.A.S.", "period": "2012 – Presente", "duration": "13 yrs 11 mos"}, {"position": "Manager and Technical Director", "company": "AOXLAB S.A.S.", "period": "2012 – Aug 2022", "duration": "10 yrs"}, {"position": "Docente de cátedra Diseño y desarrollo de productos químicos y biotecnológicos", "company": "Universidad EAFIT", "period": "2017 – Presente", "duration": "9 yrs"}, {"position": "Investigador Consultor", "company": "Industria de Alimentos", "period": "2010 – Presente", "duration": "15 yrs 10 mos"}, {"position": "Beca I+D+I", "company": "CAPSA", "period": "2012 – Aug 2012", "duration": "7 mos"}],
   },
   {
     id: 13,
@@ -347,6 +383,9 @@ export const profiles = [
     internationalMarkets: ["América Latina"],
     uniquePerspective: "Construyó productos digitales desde cero y escaló empresa tech en mercado emergente. Perspectiva práctica sobre IA: sabe qué funciona y por qué.",
     nonNegotiables: "",
+    education: [{"degree": "Máster en Gerencia de la Innovación y el Conocimiento", "school": "Universidad EAFIT", "period": ""}, {"degree": "Bachelor of Business Administration - BBA en Énfasis en innovació", "school": "Universidad EAFIT", "period": ""}, {"degree": "Tecnóloga en operaciones comerciales y financieras", "school": "Servicio Nacional de Aprendizaje (SENA)", "period": ""}],
+    linkedinCerts: [],
+    experience: [{"position": "Chief Innovation Officer", "company": "COCO Tecnologías", "period": "2025 – Presente", "duration": "1 yr 3 mos"}, {"position": "Chief Operating Officer", "company": "COCO Tecnologías", "period": "2024 – Apr 2025", "duration": "1 yr 1 mo"}, {"position": "Estrategia y proyectos", "company": "COCO Tecnologías", "period": "2022 – May 2024", "duration": "2 yrs 3 mos"}, {"position": "Gerente administrativa", "company": "Dacos Steak House", "period": "2021 – Mar 2022", "duration": "6 mos"}, {"position": "Consultant", "company": "Ernst & Young", "period": "2019 – Oct 2021", "duration": "2 yrs 1 mo"}],
   },
   {
     id: 14,
@@ -371,6 +410,9 @@ export const profiles = [
     internationalMarkets: ["Solo Colombia"],
     uniquePerspective: "Donde otros ven crisis, ve oportunidades. Ha reinventado modelos de negocio en entornos adversos apostando por innovación y personas.",
     nonNegotiables: "Cuando las empresas sirven a las personas, las personas hacen grandes a las empresas.",
+    education: [{"degree": "Ingenieria Civil", "school": "Escuela Colombiana de Ingeniería Julio Garavito", "period": "Jan 1996 - Jun 1998"}, {"degree": "Bootcamp de IA para comerciales y ventas", "school": "CESA", "period": "Apr 2025 - Apr 2025"}, {"degree": "Programa Gobierno Corporativo para Emprendedores", "school": "CESA", "period": "Aug 2024 - Aug 2024"}],
+    linkedinCerts: [],
+    experience: [{"position": "Empresario independiente", "company": "Freelance", "period": "2026 – Presente", "duration": "3 mos"}, {"position": "Mentoring Corporativo", "company": "PADUA arômes", "period": "2026 – May 2026", "duration": "2 mos"}, {"position": "Gerente General.   2025-Ganador Premio Lazos \"Mejor Servicio Sostenible\" Grandes empresas Colombia", "company": "dragon.co", "period": "2025 – Apr 2026", "duration": "10 mos"}, {"position": "Gerente General.   2025-Certificación Empresa B.", "company": "dragon.co", "period": "2025 – Jun 2025", "duration": "6 mos"}, {"position": "Gerente General.   2024-Ganador Premio \"Acción por el Clima\" Medianas empresas Colombia", "company": "dragon.co", "period": "2024 – Dec 2024", "duration": "6 mos"}],
   },
   {
     id: 15,
@@ -395,6 +437,9 @@ export const profiles = [
     internationalMarkets: ["América Latina", "EEUU", "Europa"],
     uniquePerspective: "Visión transversal del negocio desde el acompañamiento multisectorial. Combina mirada de empresaria con la de consultora para decisiones prácticas y sostenibles.",
     nonNegotiables: "Empresas que actúen, innoven y evolucionen antes de buscar perfección.",
+    education: [{"degree": "Master en Innovacion", "school": "EIG Education", "period": "2020 - 2021"}, {"degree": "Especializacion en gerencia integral", "school": "Fundación Universitaria CEIPA", "period": "2020 - 2021"}, {"degree": "Contaduria Publica en Contabilidad", "school": "Corporacion Universitaria de Colombia IDEAS", "period": "2008 - 2013"}, {"degree": "Tecnología en dirección de ventas", "school": "Servicio Nacional de Aprendizaje (SENA)", "period": "2008 - 2010"}],
+    linkedinCerts: [],
+    experience: [{"position": "Directora comercial-Creadora de GPE", "company": "Grupo Proyección Empresarial", "period": "2020 – Presente", "duration": "6 yrs 6 mos"}, {"position": "Directora administrativa", "company": "PCE Asociados", "period": "2021 – Presente", "duration": "5 yrs 6 mos"}, {"position": "Gerente general", "company": "Proyección Contable & Empresarial", "period": "2019 – Presente", "duration": "7 yrs 6 mos"}, {"position": "Directora Adminsitrativa", "company": "Proyección Contable & Empresarial", "period": "2017 – Jan 2019", "duration": "2 yrs 1 mo"}, {"position": "Auxiliar administrativa", "company": "Vision Segura y cia Ltda", "period": "2010 – Jan 2017", "duration": "6 yrs 10 mos"}],
   },
   {
     id: 16,
@@ -419,6 +464,9 @@ export const profiles = [
     internationalMarkets: ["América Latina", "Europa"],
     uniquePerspective: "Empresaria que construyó empresa desde la resiliencia y la tecnología. Combina estrategia, innovación y sensibilidad humana.",
     nonNegotiables: "Empresas que valoren ética, transparencia, innovación y respeto por las personas.",
+    education: [{"degree": "Artificial Intelligence Professional Certificate en Inteligencia artificial", "school": "CERTIPROF", "period": "Apr 2025 - Apr 2025"}, {"degree": "Certificate of The Program on Organizational Revitalization for Latin America (LAOR) en Administración y gestión de empresas", "school": "AOTS KENSHU CENTER OSAKA JAPON", "period": "Feb 2025 - Mar 2025"}, {"degree": "Certified product owner", "school": "Kleer", "period": "2013"}, {"degree": "PNL", "school": "Elixir", "period": ""}, {"degree": "Especialista en Gestión de Proyectos", "school": "UNIMINUTO Colombia", "period": ""}],
+    linkedinCerts: [],
+    experience: [{"position": "Owner", "company": "GT Consulting SAS", "period": "", "duration": ""}, {"position": "Socia", "company": "Gestion TI", "period": "2010 – 2014", "duration": "4 yrs"}, {"position": "Consultora Metodológica", "company": "Heinsohn Software House", "period": "2008 – 2014", "duration": "6 yrs"}, {"position": "Consultora Metodológica", "company": "IG Software House", "period": "2006 – 2013", "duration": "7 yrs"}, {"position": "Directora de Calidad", "company": "Netsac S.A", "period": "2003 – 2006", "duration": "3 yrs"}],
   },
   {
     id: 17,
@@ -443,6 +491,9 @@ export const profiles = [
     internationalMarkets: ["América Latina", "EEUU"],
     uniquePerspective: "Gestiona organizaciones con agilidad de emprendedor social y rigor científico. Integra rentabilidad con sostenibilidad humana, transformando la neurodiversidad en ventaja competitiva.",
     nonNegotiables: "Compromiso real con equidad e inclusión. No trabaja con empresas que traten la diversidad como marketing.",
+    education: [{"degree": "Estudiante del Doctorado en Educación y Sociedad", "school": "Universidad de La Salle", "period": ""}, {"degree": "Pasantía en Pedagogía", "school": "Universidad de Málaga", "period": ""}, {"degree": "Maestría en Neuropsicología y Educación en Neurociencia", "school": "Universidad de La Rioja", "period": ""}, {"degree": "Especialista en Psicología Educativa", "school": "Universidad de La Sabana", "period": ""}, {"degree": "Especialista en gerencia educativa en Administración educativa", "school": "Universidad Pedagógica y Tecnológica de Colombia", "period": ""}, {"degree": "Licenciatura en educación básica con énfasis en ciencias sociales", "school": "Universidad Distrital Francisco José de Caldas", "period": ""}, {"degree": "CURSO POLÍTICA PARA EMPRENDEDORES en Ciencias políticas y gobierno", "school": "Universidad EAFIT", "period": ""}, {"degree": "Gobierno Corporativo", "school": "CESA", "period": ""}, {"degree": "Diplomado en trastornos del neurodesarrollo y del aprendizaje en Formación continua y educación para adultos", "school": "Universidad El Bosque", "period": ""}, {"degree": "Diversidad e inclusión en Programa de Formación - Escuela de Diversidad e Inclusió", "school": "Platzi", "period": ""}, {"degree": "Curso Niñez desarrollo socioemocional y mindfulness en Formación continua y educación para adultos", "school": "Universidad de los Andes - Colombia", "period": ""}, {"degree": "Taller Aulas Respetuosas en Disciplina con Sentido", "school": "Mindheart & Crianza con el cerebro en mente", "period": ""}, {"degree": "Taller Narrativas Digitales en Educación. ¡Cuéntame un cuento para aprender!", "school": "Universidad EAN", "period": ""}, {"degree": "Seminario-taller en Redacción, ortografía y gramática en Habilidades sociales y para los negocios", "school": "Universidad Nacional de Colombia", "period": ""}, {"degree": "Bogotá Emprende en Formación continua y educación para adultos", "school": "Fundación Universitaria Empresarial de la Cámara de Comercio de Bogotá", "period": ""}, {"degree": "Diplomado en estrategias de negociación en Habilidades sociales y para los negocios", "school": "tandem Insourcing", "period": ""}],
+    linkedinCerts: [],
+    experience: [{"position": "Coordinadora de Desarrollo y Aprendizaje", "company": "Senado de la República de Colombia", "period": "2026 – Presente", "duration": "5 mos"}, {"position": "CEO", "company": "ESCOLE", "period": "2010 – Presente", "duration": "16 yrs 6 mos"}, {"position": "Rectora Red de Colegios del Colegio Bilingüe Renfort", "company": "ESCOLE", "period": "2017 – Presente", "duration": "9 yrs 6 mos"}, {"position": "Líder Semilleros Jardines Infantiles Petiné", "company": "ESCOLE", "period": "2023 – Presente", "duration": "3 yrs 6 mos"}, {"position": "Directora Lupe Academy", "company": "ESCOLE", "period": "2022 – Presente", "duration": "4 yrs 5 mos"}],
   },
   {
     id: 18,
@@ -467,6 +518,9 @@ export const profiles = [
     internationalMarkets: ["América Latina", "Europa"],
     uniquePerspective: "Combina experiencia de gerente familiar con paso por McKinsey, startup y fondo de capital privado. Visión amplia para aterrizar ideas desde múltiples perspectivas.",
     nonNegotiables: "",
+    education: [{"degree": "Administrador de empresas", "school": "Universidad de Los Andes", "period": "2010 - 2015"}, {"degree": "Bachiller Acádemico", "school": "Colegio Salesiano San Pedro Claver", "period": ""}],
+    linkedinCerts: [],
+    experience: [{"position": "Gerente general", "company": "Giuni SAS", "period": "2022 – Presente", "duration": "4 yrs 2 mos"}, {"position": "Director", "company": "Baluarte Cartagena Hotel & Restaurante Da Pietro", "period": "2018 – Feb 2023", "duration": "5 yrs 2 mos"}, {"position": "Restaurant Care Director", "company": "ClickDelivery", "period": "2017 – Jan 2018", "duration": "10 mos"}, {"position": "Project Manager", "company": "ClickDelivery", "period": "2016 – Apr 2017", "duration": "7 mos"}, {"position": "Business Intelligence Analyst", "company": "ClickDelivery", "period": "2016 – Oct 2016", "duration": "5 mos"}],
   },
   {
     id: 19,
@@ -491,5 +545,8 @@ export const profiles = [
     internationalMarkets: ["América Latina"],
     uniquePerspective: "25+ años en tecnología con enfoque profundo en IA. Mantiene el talento humano en el centro mientras entiende cómo la IA redefine empresas y liderazgo.",
     nonNegotiables: "",
+    education: [{"degree": "Cidenal 53", "school": "Escuela Superior de Guerra", "period": "Jan 2026 - Nov 2026"}, {"degree": "Latin American Management Summit LAMS", "school": "INALDE Business School", "period": "Nov 2025 - Nov 2025"}, {"degree": "Programa 10x", "school": "GROWTH ROCKSTAR", "period": "Sep 2025 - Sep 2025"}, {"degree": "Latin American Management Summit 2025 en CEO", "school": "INALDE Business School", "period": "Jul 2025 - Jul 2025"}, {"degree": "Senior Leadership Summit Latam en Desafíos para la alta dirección en América Latina", "school": "IPADE Business School", "period": "Apr 2024 - Jul 2024"}, {"degree": "𝐉𝐮𝐧𝐭𝐚𝐬 𝐃𝐢𝐫𝐞𝐜𝐭𝐢𝐯𝐚𝐬: 𝐄𝐟𝐞𝐜𝐭𝐢𝐯𝐢𝐝𝐚𝐝 𝐲 𝐑𝐞𝐬𝐮𝐥𝐭𝐚𝐝𝐨𝐬 en Programa Enfocado", "school": "INALDE Business School", "period": "Apr 2024 - May 2024"}, {"degree": "Programa de alta dirección empresarial", "school": "INALDE Business School", "period": "May 2021 - Nov 2021"}, {"degree": "CICA 2021 en Administración y gestión de empresas", "school": "IPADE Business School", "period": "Jun 2021 - Jul 2021"}, {"degree": "Leading SAFe v4.5 (SA SAFe 4)", "school": "Scaled Agile, Inc", "period": "2018 - 2018"}, {"degree": "Management3.0", "school": "https://management30.com/about/", "period": "2016 - 2016"}, {"degree": "Certified Scrum Developer", "school": "ScrumAlliance", "period": "2012 - 2012"}, {"degree": "MBA con Especialidad en Gerencia de Proyectos", "school": "Universidad de Viña del Mar", "period": "2010 - 2012"}, {"degree": "Certified Scrum Master", "school": "ScrumAlliance", "period": "2011 - 2011"}, {"degree": "Esp en Desarollo de Softwar", "school": "Universidad de Eafit", "period": "2005 - 2007"}, {"degree": "Ing en Informático", "school": "Politécnico Colombiano 'Jaime Isaza Cadavid'", "period": "1999 - 2004"}],
+    linkedinCerts: [],
+    experience: [{"position": "Chief Executive Officer", "company": "Ceiba Software", "period": "2016 – Presente", "duration": "10 yrs 6 mos"}, {"position": "Gerente de Producción", "company": "Ceiba Software", "period": "2009 – Jan 2016", "duration": "6 yrs 2 mos"}, {"position": "Project Manager", "company": "Ceiba Software", "period": "2005 – Dec 2009", "duration": "4 yrs 7 mos"}, {"position": "Solutions Developer", "company": "KMS Ltda", "period": "2002 – Jun 2005", "duration": "2 yrs 9 mos"}, {"position": "Ingeniero Desarrollador", "company": "Websys", "period": "2000 – Oct 2002", "duration": "2 yrs 4 mos"}],
   },
 ];

@@ -425,6 +425,61 @@ export default function ProfileModal({ profile, onClose }) {
                   </div>
                 )}
 
+                {/* Experience */}
+                {profile.experience && profile.experience.length > 0 && (
+                  <div style={{ marginBottom: 20 }}>
+                    <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 10 }}>Experiencia Profesional</div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                      {profile.experience.map((e, i) => (
+                        <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                          <div style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--brand-purple)", marginTop: 6, flexShrink: 0 }} />
+                          <div>
+                            <div style={{ fontSize: 12, fontWeight: 700, color: "var(--text-primary)", lineHeight: 1.3 }}>{e.position}</div>
+                            <div style={{ fontSize: 11, color: "var(--brand-purple)", fontWeight: 600 }}>{e.company}</div>
+                            <div style={{ fontSize: 11, color: "var(--text-tertiary)" }}>{e.period}{e.duration ? ` · ${e.duration}` : ""}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Education */}
+                {profile.education && profile.education.length > 0 && (
+                  <div style={{ marginBottom: 20 }}>
+                    <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 10 }}>Formación Académica</div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                      {profile.education.map((e, i) => (
+                        <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                          <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#6d28d9", marginTop: 6, flexShrink: 0 }} />
+                          <div>
+                            <div style={{ fontSize: 12, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.3 }}>{e.degree}</div>
+                            <div style={{ fontSize: 11, color: "var(--text-secondary)" }}>{e.school}{e.period ? ` · ${e.period}` : ""}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* LinkedIn Certifications */}
+                {profile.linkedinCerts && profile.linkedinCerts.length > 0 && (
+                  <div style={{ marginBottom: 20 }}>
+                    <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 10 }}>Certificaciones</div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      {profile.linkedinCerts.map((c, i) => (
+                        <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                          <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#0A66C2", marginTop: 6, flexShrink: 0 }} />
+                          <div>
+                            <div style={{ fontSize: 12, fontWeight: 600, color: "var(--text-primary)" }}>{c.name}</div>
+                            <div style={{ fontSize: 11, color: "var(--text-secondary)" }}>{c.org}{c.year ? ` · ${c.year}` : ""}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Contact + CTA */}
                 <div style={{ borderTop: "1px solid var(--border)", paddingTop: 18 }}>
                   <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 12 }}>Contacto</div>
