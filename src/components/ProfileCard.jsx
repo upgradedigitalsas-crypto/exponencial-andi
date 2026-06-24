@@ -1,3 +1,6 @@
+import { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+
 const CERT_PALETTE = {
   "Estrategia e innovación":         { bg: "#ede9fe", color: "#5b21b6" },
   "Transformación digital":          { bg: "#e0e7ff", color: "#3730a3" },
@@ -19,6 +22,7 @@ function Avatar({ photo, name }) {
         background: "linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)",
         display: "flex", alignItems: "center", justifyContent: "center",
         color: "#fff", fontSize: 17, fontWeight: 700,
+        boxShadow: "0 4px 12px rgba(124,58,237,0.3)",
       }}>{initials}</div>
     );
   }
@@ -27,6 +31,7 @@ function Avatar({ photo, name }) {
       <img src={photo} alt={name} style={{
         width: 52, height: 52, borderRadius: 14, objectFit: "cover", objectPosition: "top",
         display: "block", background: "#f0f0f0",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
       }} onError={(e) => {
         e.target.style.display = "none";
         e.target.nextSibling.style.display = "flex";
@@ -35,18 +40,56 @@ function Avatar({ photo, name }) {
         display: "none", width: 52, height: 52, borderRadius: 14, position: "absolute", inset: 0,
         background: "linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)",
         alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 17, fontWeight: 700,
+        boxShadow: "0 4px 12px rgba(124,58,237,0.3)",
       }}>{name.split(" ").slice(0, 2).map((n) => n[0]).join("").toUpperCase()}</div>
     </div>
   );
 }
 
 export default function ProfileCard({ profile, onClick, index = 0 }) {
+  const cardRef = useRef(null);
   const delay = Math.min(index * 55, 420);
+
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
+
+    const onMove = (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      gsap.to(el, {
+        rotationX: -y * 0.05,
+        rotationY: x * 0.05,
+        transformPerspective: 900,
+        ease: "power2.out",
+        duration: 0.45,
+      });
+    };
+
+    const onLeave = () => {
+      gsap.to(el, {
+        rotationX: 0,
+        rotationY: 0,
+        ease: "elastic.out(1, 0.4)",
+        duration: 1.3,
+      });
+    };
+
+    el.addEventListener("mousemove", onMove);
+    el.addEventListener("mouseleave", onLeave);
+    return () => {
+      el.removeEventListener("mousemove", onMove);
+      el.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
+
   return (
     <article
+      ref={cardRef}
       onClick={() => onClick(profile)}
-      className="flat-card fade-in"
-      style={{ padding: "18px 18px 16px", cursor: "pointer", display: "flex", flexDirection: "column", gap: 12, animationDelay: `${delay}ms` }}
+      className="pc-card fade-in"
+      style={{ animationDelay: `${delay}ms`, cursor: "pointer" }}
     >
       {/* Header */}
       <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
@@ -104,11 +147,12 @@ export default function ProfileCard({ profile, onClick, index = 0 }) {
       </div>
 
       {/* Skills + availability */}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 4, borderTop: "1px solid var(--border)", paddingTop: 10, alignItems: "center" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 4, borderTop: "1px solid rgba(0,0,0,0.05)", paddingTop: 10, alignItems: "center" }}>
         {profile.skills.slice(0, 3).map((skill) => (
           <span key={skill} style={{
             fontSize: 11, color: "var(--text-secondary)",
-            background: "var(--bg)", padding: "3px 9px", borderRadius: 100,
+            background: "rgba(0,0,0,0.04)", padding: "3px 9px", borderRadius: 100,
+            backdropFilter: "blur(4px)",
           }}>{skill}</span>
         ))}
         <span style={{ marginLeft: "auto", fontSize: 10, fontWeight: 600, color: "var(--text-tertiary)", whiteSpace: "nowrap" }}>
