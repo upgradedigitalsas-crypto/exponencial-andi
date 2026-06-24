@@ -7,6 +7,7 @@ import ProfileCard from "./components/ProfileCard";
 import ProfileModal from "./components/ProfileModal";
 import AboutSection from "./components/AboutSection";
 import CybercoreBackground from "./components/CybercoreBackground";
+import CinematicFooter from "./components/CinematicFooter";
 
 const EMPTY_FILTERS = { committees: [], sectors: [], cohorts: [] };
 
@@ -269,45 +270,7 @@ export default function App() {
         </div>
       </main>
 
-      {/* Partner logos */}
-      <section style={{ borderTop: "1px solid var(--border)", background: "#fff", padding: "40px 20px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--text-tertiary)", textAlign: "center", marginBottom: 28 }}>
-            Aliados del Programa
-          </div>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "clamp(24px, 5vw, 60px)", flexWrap: "wrap" }}>
-            {/* ANDI Antioquia */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, opacity: 0.75 }}>
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#002147", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 9, fontWeight: 900, color: "#fff", letterSpacing: "0.04em" }}>ANDI</span>
-              </div>
-              <span style={{ fontSize: 10, fontWeight: 600, color: "var(--text-secondary)", textAlign: "center", maxWidth: 80, lineHeight: 1.3 }}>ANDI Antioquia</span>
-            </div>
-            <div style={{ width: 1, height: 40, background: "var(--border)" }} />
-            {/* ADF */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, opacity: 0.75 }}>
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#1e3a5f", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 10, fontWeight: 900, color: "#fff", letterSpacing: "0.04em" }}>ADF</span>
-              </div>
-              <span style={{ fontSize: 10, fontWeight: 600, color: "var(--text-secondary)", textAlign: "center", maxWidth: 80, lineHeight: 1.3 }}>ADF</span>
-            </div>
-            <div style={{ width: 1, height: 40, background: "var(--border)" }} />
-            {/* Cámara de Comercio */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, opacity: 0.75 }}>
-              <div style={{ width: 44, height: 44, borderRadius: 12, background: "#c0392b", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: 8, fontWeight: 900, color: "#fff", letterSpacing: "0.02em", textAlign: "center", lineHeight: 1.2 }}>CCM</span>
-              </div>
-              <span style={{ fontSize: 10, fontWeight: 600, color: "var(--text-secondary)", textAlign: "center", maxWidth: 80, lineHeight: 1.3 }}>Cámara de Comercio</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer style={{ borderTop: "1px solid var(--border)", padding: "20px 20px", textAlign: "center", background: "var(--bg)" }}>
-        <p style={{ margin: 0, fontSize: 12, color: "var(--text-tertiary)", letterSpacing: "0.04em" }}>
-          © {new Date().getFullYear()} Programa Exponencial · ANDI Seccional Antioquia
-        </p>
-      </footer>
+      <CinematicFooter />
 
       <MobileFilters filters={filters} onFilterChange={handleFilterChange} onClear={clearFilters} hasActive={hasActiveFilters} open={mobileFiltersOpen} onClose={() => setMobileFiltersOpen(false)} />
       {selected && <ProfileModal profile={selected} onClose={() => setSelected(null)} />}

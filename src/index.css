@@ -136,6 +136,103 @@ body {
 /* SearchBar + main area */
 .anim-fadein { animation: heroFade 0.6s ease 0.15s both; }
 
+/* ── Cinematic Footer ── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap');
+
+@keyframes cf-breathe {
+  0%   { transform: translate(-50%, -50%) scale(1);   opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(1.12); opacity: 0.85; }
+}
+@keyframes cf-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+@keyframes cf-heartbeat {
+  0%, 100% { transform: scale(1);   filter: drop-shadow(0 0 5px rgba(239,68,68,0.4)); }
+  15%, 45% { transform: scale(1.25); filter: drop-shadow(0 0 10px rgba(239,68,68,0.8)); }
+  30%      { transform: scale(1); }
+}
+
+.cf-aurora {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(124,58,237,0.12) 0%,
+    rgba(109,40,217,0.08) 40%,
+    transparent 70%
+  );
+  animation: cf-breathe 8s ease-in-out infinite alternate;
+}
+
+.cf-bg-grid {
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right,  rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+}
+
+.cf-giant-text {
+  font-size: 28vw;
+  line-height: 0.75;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.05);
+  background: linear-gradient(180deg, rgba(0,0,0,0.07) 0%, transparent 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.cf-marquee { animation: cf-marquee 36s linear infinite; }
+
+.cf-heading-glow {
+  background: linear-gradient(180deg, var(--text-primary) 0%, rgba(15,15,15,0.45) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(124,58,237,0.15));
+}
+.cf-heading-glow span {
+  background: linear-gradient(135deg, #7C3AED 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass pill — primary */
+.cf-pill {
+  background: linear-gradient(145deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.01) 100%);
+  border: 1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 24px -8px rgba(0,0,0,0.10), inset 0 1px 1px rgba(255,255,255,0.6);
+  transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+}
+.cf-pill:hover {
+  background: linear-gradient(145deg, rgba(124,58,237,0.08) 0%, rgba(124,58,237,0.02) 100%);
+  border-color: rgba(124,58,237,0.22);
+  box-shadow: 0 16px 40px -10px rgba(124,58,237,0.18), inset 0 1px 1px rgba(167,139,250,0.3);
+  color: var(--text-primary);
+}
+
+/* Glass pill — secondary (smaller) */
+.cf-pill-sm {
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+.cf-pill-sm:hover {
+  background: rgba(124,58,237,0.06);
+  border-color: rgba(124,58,237,0.18);
+  color: var(--text-primary);
+}
+
+.cf-magnetic { cursor: pointer; }
+.cf-heartbeat { animation: cf-heartbeat 2s cubic-bezier(0.25,1,0.5,1) infinite; display: inline-block; }
+
 /* ── Cybercore Hero Background ── */
 .cybercore-scene {
   position: absolute;
