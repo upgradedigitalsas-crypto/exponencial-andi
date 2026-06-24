@@ -18,10 +18,10 @@ function Avatar({ photo, name }) {
   if (!photo) {
     return (
       <div style={{
-        width: 52, height: 52, borderRadius: 14, flexShrink: 0,
+        width: 46, height: 46, borderRadius: 13, flexShrink: 0,
         background: "linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)",
         display: "flex", alignItems: "center", justifyContent: "center",
-        color: "#fff", fontSize: 17, fontWeight: 700,
+        color: "#fff", fontSize: 15, fontWeight: 700,
         boxShadow: "0 4px 12px rgba(124,58,237,0.3)",
       }}>{initials}</div>
     );
@@ -29,7 +29,7 @@ function Avatar({ photo, name }) {
   return (
     <div style={{ position: "relative", flexShrink: 0 }}>
       <img src={photo} alt={name} style={{
-        width: 52, height: 52, borderRadius: 14, objectFit: "cover", objectPosition: "top",
+        width: 46, height: 46, borderRadius: 13, objectFit: "cover", objectPosition: "top",
         display: "block", background: "#f0f0f0",
         boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
       }} onError={(e) => {
@@ -37,9 +37,9 @@ function Avatar({ photo, name }) {
         e.target.nextSibling.style.display = "flex";
       }} />
       <div style={{
-        display: "none", width: 52, height: 52, borderRadius: 14, position: "absolute", inset: 0,
+        display: "none", width: 46, height: 46, borderRadius: 13, position: "absolute", inset: 0,
         background: "linear-gradient(135deg, #4C1D95 0%, #7C3AED 100%)",
-        alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 17, fontWeight: 700,
+        alignItems: "center", justifyContent: "center", color: "#fff", fontSize: 15, fontWeight: 700,
         boxShadow: "0 4px 12px rgba(124,58,237,0.3)",
       }}>{name.split(" ").slice(0, 2).map((n) => n[0]).join("").toUpperCase()}</div>
     </div>

@@ -254,13 +254,7 @@ export default function App() {
                 </button>
               </div>
             ) : (
-              <div style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(1, 1fr)",
-                gap: 12,
-              }}
-                className="sm:grid-cols-2 xl:grid-cols-3"
-              >
+              <div className="cards-grid">
                 {filtered.map((profile, i) => (
                   <ProfileCard key={profile.id} profile={profile} onClick={setSelected} index={i} />
                 ))}
