@@ -342,8 +342,8 @@ export default function ProfileModal({ profile, onClose }) {
                     </div>
                   </div>
                   <img
-                    src={`${base}logo-exponencial.png`}
-                    alt="ADF"
+                    src={`${base}logo-andi-futuro.png`}
+                    alt="ANDI del Futuro"
                     style={{ height: 36, width: "auto", objectFit: "contain", flexShrink: 0 }}
                   />
                 </div>
