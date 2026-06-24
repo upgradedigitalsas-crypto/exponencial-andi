@@ -6,6 +6,7 @@ import FilterPanel from "./components/FilterPanel";
 import ProfileCard from "./components/ProfileCard";
 import ProfileModal from "./components/ProfileModal";
 import AboutSection from "./components/AboutSection";
+import CybercoreBackground from "./components/CybercoreBackground";
 
 const EMPTY_FILTERS = { committees: [], sectors: [], cohorts: [] };
 
@@ -123,16 +124,9 @@ export default function App() {
       <Header />
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg, #1e1b4b 0%, #4C1D95 60%, #6D28D9 100%)", padding: "64px 20px 72px", position: "relative", overflow: "hidden" }}>
+      <section style={{ padding: "64px 20px 72px", position: "relative", overflow: "hidden" }}>
 
-        {/* Apple-style noise grain overlay */}
-        <div style={{
-          position: "absolute", inset: 0, zIndex: 0, pointerEvents: "none",
-          backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")",
-          backgroundSize: "180px 180px",
-          opacity: 0.09,
-          mixBlendMode: "overlay",
-        }} />
+        <CybercoreBackground beamCount={70} />
 
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div className="hero-t1" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 12, marginBottom: 52 }}>
