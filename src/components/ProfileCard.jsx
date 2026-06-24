@@ -72,8 +72,16 @@ export default function ProfileCard({ profile, onClick, index = 0 }) {
         {profile.bio}
       </p>
 
-      {/* Committees */}
+      {/* Committees + cohort badge */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+        {profile.cohort === "2024" && (
+          <span style={{
+            fontSize: 10, fontWeight: 700, padding: "3px 9px", borderRadius: 100,
+            background: "#fef9c3", color: "#854d0e", border: "1px solid #fde68a",
+          }}>
+            Cohorte 2024
+          </span>
+        )}
         {profile.committees.slice(0, 2).map((c) => {
           const p = CERT_PALETTE[c] || { bg: "#f3f4f6", color: "#374151" };
           return (

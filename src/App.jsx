@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { profiles, COMMITTEES, SECTORS, COMPANY_TYPES } from "./data/profiles";
+import { profiles, COMMITTEES, SECTORS, COHORTS } from "./data/profiles";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import FilterPanel from "./components/FilterPanel";
@@ -7,7 +7,7 @@ import ProfileCard from "./components/ProfileCard";
 import ProfileModal from "./components/ProfileModal";
 import AboutSection from "./components/AboutSection";
 
-const EMPTY_FILTERS = { committees: [], sectors: [], companyTypes: [] };
+const EMPTY_FILTERS = { committees: [], sectors: [], cohorts: [] };
 
 /* Mobile filter drawer */
 function MobileFilters({ filters, onFilterChange, onClear, hasActive, open, onClose }) {
@@ -47,7 +47,7 @@ function MobileFilters({ filters, onFilterChange, onClear, hasActive, open, onCl
         {[
           { key: "committees", label: "Comités de Junta", opts: COMMITTEES },
           { key: "sectors", label: "Sector", opts: SECTORS },
-          { key: "companyTypes", label: "Tipo de Empresa", opts: COMPANY_TYPES },
+          { key: "cohorts", label: "Cohorte", opts: COHORTS },
         ].map(({ key, label, opts }) => (
           <div key={key} style={{ marginBottom: 24 }}>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 6, paddingLeft: 4 }}>
@@ -93,8 +93,8 @@ export default function App() {
   const [selected, setSelected] = useState(null);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  const hasActiveFilters = filters.committees.length > 0 || filters.sectors.length > 0 || filters.companyTypes.length > 0;
-  const totalActive = filters.committees.length + filters.sectors.length + filters.companyTypes.length;
+  const hasActiveFilters = filters.committees.length > 0 || filters.sectors.length > 0 || filters.cohorts.length > 0;
+  const totalActive = filters.committees.length + filters.sectors.length + filters.cohorts.length;
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
@@ -102,19 +102,20 @@ export default function App() {
       const matchesQuery = !q || [p.name, p.company, p.role, p.sector, p.city, ...p.skills].some(s => s.toLowerCase().includes(q));
       const matchesCommittees = !filters.committees.length || filters.committees.some(c => p.committees.includes(c));
       const matchesSectors = !filters.sectors.length || filters.sectors.some(s => p.sectors.includes(s));
-      const matchesCompanyTypes = !filters.companyTypes.length || filters.companyTypes.includes(p.companyType);
-      return matchesQuery && matchesCommittees && matchesSectors && matchesCompanyTypes;
+      const matchesCohorts = !filters.cohorts.length || filters.cohorts.some(c =>
+        c === "Cohorte 2024" ? p.cohort === "2024" : (!p.cohort || p.cohort === "2026")
+      );
+      return matchesQuery && matchesCommittees && matchesSectors && matchesCohorts;
     });
   }, [query, filters]);
 
   const handleFilterChange = (key, values) => setFilters(prev => ({ ...prev, [key]: values }));
   const clearFilters = () => { setFilters(EMPTY_FILTERS); setQuery(""); };
 
-  // Pass filter constants down
   const filterConfig = [
     { key: "committees", label: "Comités de Junta", opts: COMMITTEES },
     { key: "sectors", label: "Sector", opts: SECTORS },
-    { key: "companyTypes", label: "Tipo de Empresa", opts: COMPANY_TYPES },
+    { key: "cohorts", label: "Cohorte", opts: COHORTS },
   ];
 
   return (
@@ -204,7 +205,7 @@ export default function App() {
             {/* Active filter chips */}
             {hasActiveFilters && (
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>
-                {[...filters.committees, ...filters.sectors, ...filters.companyTypes].map((tag) => (
+                {[...filters.committees, ...filters.sectors, ...filters.cohorts].map((tag) => (
                   <span key={tag} style={{
                     display: "inline-flex", alignItems: "center", gap: 5,
                     background: "var(--brand-purple)", color: "#fff",
@@ -212,7 +213,7 @@ export default function App() {
                   }}>
                     {tag}
                     <button onClick={() => {
-                      const key = filters.committees.includes(tag) ? "committees" : filters.sectors.includes(tag) ? "sectors" : "companyTypes";
+                      const key = filters.committees.includes(tag) ? "committees" : filters.sectors.includes(tag) ? "sectors" : "cohorts";
                       handleFilterChange(key, filters[key].filter(v => v !== tag));
                     }} style={{
                       background: "rgba(255,255,255,0.18)", border: "none", borderRadius: "50%",

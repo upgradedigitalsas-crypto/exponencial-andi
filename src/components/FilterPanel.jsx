@@ -1,4 +1,4 @@
-import { COMMITTEES, SECTORS, COMPANY_TYPES } from "../data/profiles";
+import { COMMITTEES, SECTORS, COHORTS } from "../data/profiles";
 
 function FilterGroup({ title, options, selected, onToggle }) {
   return (
@@ -46,7 +46,7 @@ export default function FilterPanel({ filters, onFilterChange, onClear, hasActiv
         </div>
         <FilterGroup title="Comités de Junta" options={COMMITTEES} selected={filters.committees} onToggle={(v) => toggle("committees", v)} />
         <FilterGroup title="Sector" options={SECTORS} selected={filters.sectors} onToggle={(v) => toggle("sectors", v)} />
-        <FilterGroup title="Tipo de Empresa" options={COMPANY_TYPES} selected={filters.companyTypes} onToggle={(v) => toggle("companyTypes", v)} />
+        <FilterGroup title="Cohorte" options={COHORTS} selected={filters.cohorts} onToggle={(v) => toggle("cohorts", v)} />
       </div>
     </aside>
   );
