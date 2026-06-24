@@ -75,9 +75,9 @@ export default function AboutSection() {
         {/* Logo */}
         <div ref={refLogo} style={{ display: "flex", justifyContent: "center", marginBottom: 40 }}>
           <img
-            src={`${base}logo-exponencial.png`}
-            alt="Exponencial"
-            style={{ height: 140, width: "auto", objectFit: "contain" }}
+            src={`${base}logo-andi-futuro.png`}
+            alt="ANDI del Futuro"
+            style={{ height: 100, width: "auto", objectFit: "contain" }}
           />
         </div>
 
@@ -100,18 +100,17 @@ export default function AboutSection() {
         <div ref={refSub} style={{ textAlign: "center", marginBottom: 52 }}>
           <p style={{
             margin: "0 auto",
-            maxWidth: 620,
+            maxWidth: 580,
             fontSize: 15,
             lineHeight: 1.75,
             color: "var(--text-secondary)",
             fontWeight: 400,
           }}>
-            Impulsado por <strong style={{ color: "var(--text-primary)" }}>ANDI Seccional Antioquia</strong>,{" "}
-            <strong style={{ color: "var(--text-primary)" }}>ANDI del Futuro</strong> y la{" "}
-            <strong style={{ color: "var(--text-primary)" }}>Cámara de Comercio de Medellín para Antioquia</strong>,
-            y certificado por el <strong style={{ color: "var(--text-primary)" }}>CESA</strong>,
-            este directorio conecta a empresas con líderes listos para transformar
-            sus organizaciones desde los órganos de gobierno.
+            Una iniciativa de{" "}
+            <strong style={{ color: "var(--text-primary)" }}>ANDI del Futuro</strong>{" "}
+            para facilitar las estrategias de gobierno corporativo en empresas colombianas,
+            conectando organizaciones con líderes certificados listos para transformar
+            sus juntas directivas.
           </p>
         </div>
 
@@ -158,27 +157,25 @@ export default function AboutSection() {
           <div ref={refLeft}>
             <div style={{ width: 32, height: 3, background: "var(--brand-purple)", borderRadius: 2, marginBottom: 20 }} />
             <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 800, letterSpacing: "-0.025em", color: "var(--text-primary)" }}>
-              Directorio para Juntas
+              Directorio de Talento ADF
             </h3>
             <p style={{ margin: 0, fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.75 }}>
-              Accede a los {profiles.length} líderes disponibles, seleccionados
+              Conecta con los {profiles.length} líderes certificados, seleccionados
               por su experiencia en juntas directivas, gobierno corporativo y capacidad de generar
               valor estratégico desde los órganos de gobierno.
             </p>
           </div>
 
-          {/* CESA */}
+          {/* Gobierno corporativo */}
           <div ref={refRight}>
             <div style={{ width: 32, height: 3, background: "var(--brand-purple)", borderRadius: 2, marginBottom: 20 }} />
             <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 800, letterSpacing: "-0.025em", color: "var(--text-primary)" }}>
-              Certificación CESA
+              Gobierno corporativo de alto impacto
             </h3>
             <p style={{ margin: 0, fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.75 }}>
-              Los líderes del directorio están certificados por el Centro de Estudios en
-              Gobierno Corporativo del{" "}
-              <strong style={{ color: "var(--text-primary)" }}>CESA</strong>,
-              garantizando el más alto estándar académico en formación de juntas directivas
-              en Colombia.
+              Líderes con experiencia real en juntas directivas, gobierno corporativo
+              y transformación empresarial —listos para aportar visión estratégica
+              en empresas de alto crecimiento.
             </p>
           </div>
 

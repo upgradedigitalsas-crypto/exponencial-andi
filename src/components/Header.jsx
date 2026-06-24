@@ -6,16 +6,16 @@ export default function Header() {
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 80 }}>
 
-          {/* Logo imagen real */}
+          {/* Logo ANDI del Futuro */}
           <img
-            src={`${base}logo-exponencial.png`}
-            alt="Gobierno Corporativo Exponencial"
-            style={{ height: 64, width: "auto", objectFit: "contain" }}
+            src={`${base}logo-andi-futuro.png`}
+            alt="ANDI del Futuro"
+            style={{ height: 56, width: "auto", objectFit: "contain" }}
           />
 
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <span style={{ fontSize: 12, color: "var(--text-tertiary)" }} className="hidden sm:block">
-              Directorio · ANDI + CCMA
+              Directorio de Talento · Juntas Directivas
             </span>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 1 }}>
               <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--brand-purple)", lineHeight: 1 }}>

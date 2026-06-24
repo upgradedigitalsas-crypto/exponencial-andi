@@ -136,7 +136,7 @@ export default function App() {
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div className="hero-t1" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 12, marginBottom: 52 }}>
             <h1 style={{ margin: 0, fontSize: "clamp(32px, 5vw, 60px)", fontWeight: 800, letterSpacing: "-0.04em", color: "#f5f5f7", lineHeight: 1.1 }}>
-              Directorio de Talento<br />
+              Directorio de Talento ADF<br />
               <span style={{ color: "#a78bfa" }}>para Juntas Directivas</span>
             </h1>
             <p className="hero-t2" style={{ margin: 0, fontSize: "clamp(14px, 2vw, 17px)", color: "rgba(255,255,255,0.45)", maxWidth: 520, lineHeight: 1.65, fontWeight: 400 }}>
