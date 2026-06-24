@@ -100,17 +100,18 @@ export default function AboutSection() {
         <div ref={refSub} style={{ textAlign: "center", marginBottom: 52 }}>
           <p style={{
             margin: "0 auto",
-            maxWidth: 600,
+            maxWidth: 620,
             fontSize: 15,
             lineHeight: 1.75,
             color: "var(--text-secondary)",
             fontWeight: 400,
           }}>
-            Impulsado por <strong style={{ color: "var(--text-primary)" }}>ANDI Antioquia</strong>,{" "}
+            Impulsado por <strong style={{ color: "var(--text-primary)" }}>ANDI Seccional Antioquia</strong>,{" "}
             <strong style={{ color: "var(--text-primary)" }}>ANDI del Futuro</strong> y la{" "}
-            <strong style={{ color: "var(--text-primary)" }}>Cámara de Comercio de Medellín</strong>,
+            <strong style={{ color: "var(--text-primary)" }}>Cámara de Comercio de Medellín para Antioquia</strong>,
             y certificado por el <strong style={{ color: "var(--text-primary)" }}>CESA</strong>,
-            Exponencial equipa a líderes empresariales con las herramientas para transformar sus organizaciones.
+            este directorio conecta a empresas con líderes listos para transformar
+            sus organizaciones desde los órganos de gobierno.
           </p>
         </div>
 
@@ -131,10 +132,10 @@ export default function AboutSection() {
 
           <div ref={refN2} style={{ textAlign: "center" }}>
             <div style={{ fontSize: "clamp(40px, 5vw, 56px)", fontWeight: 800, letterSpacing: "-0.04em", color: "var(--brand-purple)", lineHeight: 1 }}>
-              8
+              9
             </div>
             <div style={{ fontSize: 12, fontWeight: 600, color: "var(--text-tertiary)", marginTop: 6, textTransform: "uppercase", letterSpacing: "0.1em" }}>
-              Módulos de formación
+              Comités de junta
             </div>
           </div>
 
@@ -160,9 +161,9 @@ export default function AboutSection() {
               Directorio para Juntas
             </h3>
             <p style={{ margin: 0, fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.75 }}>
-              Accede a los {profiles.length} líderes disponibles en la Cohorte 2026, seleccionados
+              Accede a los {profiles.length} líderes disponibles, seleccionados
               por su experiencia en juntas directivas, gobierno corporativo y capacidad de generar
-              valor estratégico en empresas de alto crecimiento.
+              valor estratégico desde los órganos de gobierno.
             </p>
           </div>
 
@@ -170,13 +171,14 @@ export default function AboutSection() {
           <div ref={refRight}>
             <div style={{ width: 32, height: 3, background: "var(--brand-purple)", borderRadius: 2, marginBottom: 20 }} />
             <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 800, letterSpacing: "-0.025em", color: "var(--text-primary)" }}>
-              Sello CESA
+              Certificación CESA
             </h3>
             <p style={{ margin: 0, fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.75 }}>
-              Programa certificado por el Centro de Estudios en Gobierno Corporativo del{" "}
+              Los líderes del directorio están certificados por el Centro de Estudios en
+              Gobierno Corporativo del{" "}
               <strong style={{ color: "var(--text-primary)" }}>CESA</strong>,
-              garantizando el más alto estándar académico en formación de líderes
-              empresariales colombianos.
+              garantizando el más alto estándar académico en formación de juntas directivas
+              en Colombia.
             </p>
           </div>
 
